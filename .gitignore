@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# user-uploaded notes & files (local persistence)
+/data
+
+# python virtualenv
+/.venv
+
+# downloaded binary tools & models (real-esrgan / waifu2x)
+/.tools
+
+# backup files
+*.bak
+

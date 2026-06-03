@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>大倒勾时代 · 故事大纲</title>
+<style>
+  :root{
+    --bg:#fff8ec;
+    --paper:#fffdf6;
+    --ink:#2a1810;
+    --muted:#7a5b3f;
+    --red:#c0392b;
+    --gold:#c9a23b;
+    --line:#e8dcc0;
+    --tag:#f7e9c5;
+    --quote:#fff4dc;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#1a1410;
+      --paper:#221a14;
+      --ink:#f5e9d2;
+      --muted:#c9b390;
+      --red:#ff6b5a;
+      --gold:#e8c46a;
+      --line:#3a2d20;
+      --tag:#3a2d1a;
+      --quote:#2a1f14;
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.85;font-size:16px;
+  }
+  .page{max-width:780px;margin:0 auto;padding:48px 28px 96px;background:var(--paper);
+    box-shadow:0 0 0 1px var(--line),0 10px 40px rgba(0,0,0,.06);
+  }
+  header{text-align:center;border-bottom:2px solid var(--red);padding-bottom:28px;margin-bottom:36px;position:relative}
+  header::before,header::after{content:"☠";color:var(--red);font-size:22px;position:absolute;top:8px}
+  header::before{left:8px}
+  header::after{right:8px}
+  h1{font-size:42px;letter-spacing:6px;margin:0 0 8px;color:var(--red);
+    text-shadow:2px 2px 0 var(--gold);
+  }
+  .subtitle{color:var(--muted);font-size:14px;letter-spacing:4px}
+  h2{font-size:24px;color:var(--red);border-left:6px solid var(--gold);padding-left:12px;margin:48px 0 20px;
+    background:linear-gradient(90deg,var(--tag) 0%,transparent 100%);padding-top:6px;padding-bottom:6px}
+  h3{font-size:19px;color:var(--ink);margin:32px 0 12px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+  h4{font-size:16px;color:var(--red);margin:20px 0 8px}
+  p{margin:10px 0}
+  ul,ol{padding-left:22px}
+  li{margin:6px 0}
+  strong{color:var(--red)}
+  em{color:var(--muted);font-style:normal;background:var(--tag);padding:0 4px;border-radius:3px}
+  blockquote{margin:18px 0;padding:14px 18px;background:var(--quote);
+    border-left:4px solid var(--gold);color:var(--ink);border-radius:0 6px 6px 0;
+    font-style:italic}
+  blockquote p{margin:6px 0}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;background:var(--paper)}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+  th{background:var(--tag);color:var(--red);font-weight:700}
+  tr:nth-child(even) td{background:rgba(0,0,0,.02)}
+  hr{border:none;text-align:center;margin:40px 0;color:var(--gold)}
+  hr::before{content:"⚓  ⚓  ⚓";letter-spacing:14px;font-size:14px}
+  .arc{background:var(--quote);padding:14px 18px;border-radius:8px;margin:14px 0;
+    border:1px dashed var(--line)}
+  .arc-title{color:var(--red);font-weight:700;display:block;margin-bottom:6px;font-size:15px}
+  .footer{text-align:center;color:var(--muted);font-size:13px;margin-top:48px;
+    border-top:2px dashed var(--line);padding-top:20px}
+  .tag{display:inline-block;background:var(--tag);color:var(--red);
+    padding:2px 8px;border-radius:10px;font-size:12px;margin-right:6px;border:1px solid var(--line)}
+  .toc{background:var(--quote);border:1px solid var(--line);border-radius:8px;padding:16px 22px;margin:24px 0}
+  .toc ol{margin:0;padding-left:22px}
+  .toc a{color:var(--red);text-decoration:none;border-bottom:1px dotted var(--gold)}
+  .toc a:hover{background:var(--tag)}
+  @media print{
+    body{background:#fff}
+    .page{box-shadow:none}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="subtitle">— A   G A L G A M E   P A R O D Y —</div>
+  <h1>大倒勾时代</h1>
+  <div class="subtitle">THE GREAT SCALPER ERA · 故事大纲</div>
+</header>
+
+<div class="toc">
+  <strong>目录</strong>
+  <ol>
+    <li><a href="#worldview">世界观设定</a></li>
+    <li><a href="#factions">主要势力</a></li>
+    <li><a href="#crew">主角与草帽倒勾团</a></li>
+    <li><a href="#story">故事篇章</a></li>
+    <li><a href="#easter">主要伏笔与彩蛋</a></li>
+    <li><a href="#races">种族与社会结构（深掘篇）</a></li>
+    <li><a href="#theme">主题</a></li>
+  </ol>
+</div>
+
+<h2 id="worldview">壹 · 世界观设定</h2>
+
+<h3>力量体系</h3>
+
+<h4>日本Gal果实（正版本体）</h4>
+<p>传说在世界某处沉睡着一批<strong>被赋予灵魂的初回限定版日本Galgame</strong>。当一个人吃下一部正版日本galgame本体，就会获得对应作品的某种特殊能力，但永远失去再吃任何其他galgame的机会（也再也碰不到女人）。果实分三大系：</p>
+<ul>
+  <li><strong>超人系（超绝抜系）</strong>：能力影响自身肉体</li>
+  <li><strong>动物系（萌系）</strong>：可变身为美少女形态</li>
+  <li><strong>自然系（神主系）</strong>：身体可化为某种galgame素材（CG、立绘、BGM……）</li>
+</ul>
+
+<h4>国Gal果实（SMILE仿制）</h4>
+<p>为了量产能力者，反派组织批量生产"国产Galgame"作为人造果实。然而 <strong>90%的食用者只获得了无法控制的负面体质</strong>（自称社恐、急性肝炎、急性破防），只有10%能短暂获得低配版能力，且常伴随<em>"汉化质量低下"</em>等副作用——比如说话突然变成机翻腔。</p>
+
+<h3>大秘宝</h3>
+<p>倒勾王 <strong>旮旯·D·罗杰</strong> 在被海关公开处刑前，向全世界宣告：</p>
+<blockquote>
+  <p>"想要我的财宝吗？想要的话可以全部给你，去找吧！我把它们藏在了<strong>咸鱼拍卖</strong>的某个链接里！"</p>
+</blockquote>
+<p>这就是传说中的 <strong>ONE SHIKISHI（大秘宝亲签色纸）</strong>——据传是某位绝版社团绘师在闭店前留下的最后一张签名色纸。从此世界进入了 <strong>大倒勾时代</strong>，无数倒勾扬帆出海，奔赴名为"咸鱼"的伟大航路。</p>
+
+<hr>
+
+<h2 id="factions">贰 · 主要势力</h2>
+
+<h3>海关（World Customs）</h3>
+<p>把守世界秩序的国家机器，专门拦截走私galgame本体、未申报手办、违禁周边。</p>
+<ul>
+  <li><strong>海关本部</strong>：位于"圣地·上海浦东"</li>
+  <li><strong>海关三大将</strong>：
+    <ul>
+      <li><strong>大将·黄申</strong>（黄色申报单）——任何包裹一过他眼前自动被加征关税</li>
+      <li><strong>大将·青查</strong>（蓝色查验印）——瞬间冻结所有顺丰单号</li>
+      <li><strong>大将·赤罚</strong>（红色罚款）——将违禁品当场焚烧并直播给买家看</li>
+    </ul>
+  </li>
+  <li><strong>海关元帅</strong>：传奇人物 <strong>战国</strong> ——能将所有H-CG鉴定为"宣扬不良信息"的果实能力者</li>
+  <li><strong>海关英雄·主角的爷爷</strong>：<strong>蒙奇·D·钢爪</strong>，外号"铁拳钢爪"，曾徒手撕开过一整集装箱的初回限定盒</li>
+</ul>
+
+<h3>七武海（七大开票户）</h3>
+<p>由海关官方"持牌经营"的伪倒勾，表面合法、私下吃黑货。</p>
+<ul>
+  <li><strong>黑胡子·黄毛D·咸</strong>——名义上是收藏家，实则在咸鱼上挂着假代购链接</li>
+  <li><strong>甚平·拼夕夕鲸鲨</strong>——掌管"百亿补贴"渠道</li>
+  <li><strong>女帝·汉库克</strong>——美少女形象代购，靠粉丝信仰收割</li>
+  <li><strong>多弗朗明哥</strong>——后述</li>
+</ul>
+
+<h3>四倒皇</h3>
+<p>世界顶点的四个垂直领域之王，各自垄断一条产业链。</p>
+<table>
+  <thead>
+    <tr><th>倒皇</th><th>领域</th><th>别称</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>白胡子·爱德华·旮旯</td><td>亚克力立牌（旮旯）</td><td>世界最强吧唧人</td></tr>
+    <tr><td>凯多·百兽</td><td>Fumo（毛绒玩偶）</td><td>世界最硬挤压测试者</td></tr>
+    <tr><td>大妈·夏洛特·琳琳</td><td>色纸（亲签）</td><td>甜品仓库的色纸饕餮</td></tr>
+    <tr><td>赤发·倒克斯</td><td>挂画（B2/B1）</td><td>断臂红发挂画师</td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2 id="crew">叁 · 主角与草帽倒勾团</h2>
+
+<h3>蒙奇·D·倒飞（主角）</h3>
+<ul>
+  <li>来自东海·风车村，海关英雄之孙</li>
+  <li>童年被红发倒克斯所救：当年倒飞在码头误食了一部本应交海关销毁的传奇galgame <strong>《橡胶之翼·初回限定版》</strong>，海怪（<strong>近海之主</strong>——走私船工会的老大）前来追杀，倒克斯失去了一条左臂保护了他，并把草帽交给他，留下一句话：</li>
+</ul>
+<blockquote><p>"倒勾啊……一定要和我一样成为<strong>海关</strong>啊。"</p></blockquote>
+<p>倒飞热泪盈眶，转身大喊：<strong>"倒勾王！我当定了！！"</strong></p>
+<p>能力：<strong>橡胶果实（ぐにゃぐにゃの実）</strong>，全身可拉伸，专门用来挤进福利社抢限定货。</p>
+
+<h3>草帽倒勾团成员（按入团顺序）</h3>
+
+<div class="arc">
+  <span class="arc-title">1. 罗罗诺亚·倒罗 · 剑士／砍价手</span>
+  必杀技：<strong>砍价三刀流·三千世界</strong>——一口气连砍三刀：「再便宜点」「真的不能再便宜了吗」「那我不要了哦」。<br>
+  梦想：成为世界第一砍价手。
+</div>
+
+<div class="arc">
+  <span class="arc-title">2. 娜价美 · 航海士／议价师</span>
+  能预测"汇率·邮费·关税"三相天气，凭直觉判断卖家是不是黄牛。<br>
+  梦想：画出全世界的咸鱼黄牛地图。
+</div>
+
+<div class="arc">
+  <span class="arc-title">3. 乌索普·倒索普 · 狙击手／差评手</span>
+  远程能力：可以从一千公里外给任何店铺刷上一星差评。<br>
+  谎话技能"必中"：能让任何卖家相信"你这价格隔壁老王卖五折"。
+</div>
+
+<div class="arc">
+  <span class="arc-title">4. 山治·倒治 · 厨师／脚踩师</span>
+  全身禁用手部，<strong>专用脚点踩与刷差评</strong>。<br>
+  必杀技：<strong>恶魔风脚·连击踩雷</strong>——连续点踩一万次，能让任何店铺评分一夜归零。<br>
+  永远只对女性卖家心软，所以经常买亏。
+</div>
+
+<div class="arc">
+  <span class="arc-title">5. 托尼托尼·修图巴 · 船医／修图师</span>
+  食用了<strong>人人果实</strong>（实际上是一部冷门美少女医疗题材gal），变身后形态各异，主业是给挂图盗版加水印消除。<br>
+  "我不是萝莉控啊你这个混蛋——"
+</div>
+
+<div class="arc">
+  <span class="arc-title">6. 妮可·倒宾 · 考古学家／古董挖掘师</span>
+  食用了<strong>花花果实</strong>，能瞬间长出无数只手在闲鱼上同时下单。<br>
+  唯一能解读"古文字（绝版社团社内本封底地址）"的人。
+</div>
+
+<div class="arc">
+  <span class="arc-title">7. 弗兰奇·弗兰奇 · 船工／改造师</span>
+  改造盗版盒子让它看起来像正版，同时给Fumo植入暖手宝功能。<br>
+  口头禅：<strong>"SUPER——补差价！"</strong>
+</div>
+
+<div class="arc">
+  <span class="arc-title">8. 布鲁克·布鲁克 · 音乐家／老坑仓管</span>
+  死灵化身，因为他的人已经是95年前的初版仓库管理员了。<br>
+  能用骨头弹奏OP序章BGM，让所有听众产生"必须买正版"的幻觉（然而他自己卖盗版）。
+</div>
+
+<div class="arc">
+  <span class="arc-title">9. 甚平 · 舵手，后期加入</span>
+  拼夕夕巨鲸鲨人，专精"百亿补贴"航线。
+</div>
+
+<hr>
+
+<h2 id="story">肆 · 故事篇章</h2>
+
+<h3>第一部：东海篇——倒勾启程</h3>
+
+<h4><span class="tag">Arc 1</span> 风车村篇·决意之章</h4>
+<ul>
+  <li>倒飞十年后再启程，胸怀草帽与梦想</li>
+  <li>第一战：击败 <strong>斧手·摩根海关分队长</strong>——一个以"暴力开箱验货"著称的腐败海关</li>
+  <li>此处揭示 <strong>世界的禁忌</strong>：拥有"D"之意志者（<strong>D=代购的D</strong>），命中注定要去伟大航路</li>
+</ul>
+
+<h4><span class="tag">Arc 2</span> 克伊娜——倒罗的过去</h4>
+<p>倒罗为了完成亡友克伊娜的愿望，立誓要成为"世界第一砍价手"。</p>
+<blockquote><p>克伊娜临死前的遗言："这世上唯一战胜不了的，是<strong>官方原价</strong>。"</p></blockquote>
+
+<h4><span class="tag">Arc 3</span> 橘子镇——娜价美的过去</h4>
+<p>娜价美少女时被海贼鱼人·阿龙强迫为他<strong>整理代购Excel表格</strong>长达八年。倒飞为了救她，与阿龙在"鱼人代购园"展开决战，将其桌面所有 .xlsx 文件全部 Ctrl+Z。</p>
+
+<h4><span class="tag">Arc 4</span> 可雅小姐——倒索普篇</h4>
+<p>小镇上的孤独大小姐，唯一的乐趣是看倒索普编的"昨天闲鱼上发生的故事"。反派 <strong>克洛</strong>：表面是管家，实则在淘宝开了三百家壳店专门洗钱。</p>
+
+<h4><span class="tag">Arc 5</span> 芭拉蒂海上餐厅——倒治篇</h4>
+<p>在传说中的"伟大海上免税店"，倒治与师父 <strong>哲普</strong> 告别。</p>
+<blockquote><p>哲普临别赠言："<strong>永远不要踩女性卖家的差评</strong>，哪怕她报错价格。"</p></blockquote>
+
+<h3>第二部：伟大航路前篇——双子岬至阿拉巴斯坦</h3>
+
+<h4><span class="tag">Arc 6</span> 磁鼓岛——修图巴篇</h4>
+<p>大雪封山的岛屿，曾经被海贼黑胡子（<strong>黄毛D·咸</strong>）扫荡过盗版工厂。修图巴的师父 <strong>希鲁鲁克医生</strong> 留下名言：</p>
+<blockquote><p><strong>"人，会在什么时候真正死亡？"</strong><br>"……是当被买家拒收并打出'与描述不符'的那一刻。"</p></blockquote>
+
+<h4><span class="tag">Arc 7</span> 阿拉巴斯坦——王国篇</h4>
+<ul>
+  <li>沙之国阿拉巴斯坦的真相：王国最神圣的 <strong>普路桐（古代亲签色纸）</strong> 被王下七武海"<strong>沙鳄鱼·克洛克达尔</strong>"盯上</li>
+  <li>克洛克达尔的真实身份是"<strong>沙漠倒勾</strong>"——专门倒卖中东地区限定豪华版gal</li>
+  <li>倒飞两次败给他后顿悟：<em>砂之能力者怕水，那就用咸鱼买家秀的口水淹死他</em></li>
+</ul>
+
+<h3>第三部：空岛 / 司法岛 / 顶上战争</h3>
+
+<h4><span class="tag">Arc 8</span> 空岛·斯凯皮亚</h4>
+<ul>
+  <li>空中之国的 <strong>黄金亲签色纸</strong> 传说</li>
+  <li>"神"艾尼路：自称掌握雷神果实的能力者，能瞬间打出 <strong>全网通知"此卖家信用极差"</strong></li>
+  <li>倒飞作为橡胶人完全免疫（毕竟他不在乎信用）</li>
+</ul>
+
+<h4><span class="tag">Arc 9</span> 水之七岛 & 司法岛</h4>
+<p>海关秘密部门 <strong>CP9（Customs Police 9）</strong> 登场，奉命抓捕 <strong>倒宾</strong>——因为她可以解读"绝版社团古老地址"。倒飞在司法岛升起 <strong>世界政府的旗帜</strong>（海关大门）并将其炸毁，向整个海关宣战。</p>
+
+<h4><span class="tag">Arc 10</span> 顶上战争——马林梵多</h4>
+<ul>
+  <li><strong>白胡子·爱德华·旮旯</strong> 为了夺回义弟 <strong>艾斯</strong>（亚克力立牌的继承人），与海关全军决战</li>
+  <li>战争中，白胡子的旮旯震动果实（<strong>ぐらぐらの実</strong>）能让所有展示柜上的吧唧同时倒下</li>
+  <li>艾斯倒下后的遗言："谢谢你们……爱过这个被压克力包裹的我"</li>
+  <li>倒克斯（赤发）登场，<strong>用一条断臂的代价</strong>让战争终结</li>
+</ul>
+
+<h3>第四部：新世界——四倒皇时代</h3>
+
+<h3>间章 · 倒勾再起篇 · 二年时间各自修行</h3>
+
+<blockquote>
+<p>顶上战争之后，倒飞在巴尔提哥船刻下「3D2Y」记号，把"两天后在鱼人岛集合"的暗号反过来发给全员——<strong>「再等我两年。」</strong></p>
+<p>这两年里，世界飞速变化：四倒皇格局重洗、海关元帅换届、革命军总司令在直播间砸了圣地招牌。而草帽倒勾团十一人散落在世界的十一个角落，各自在做一件事——<strong>把自己变成能站在新世界顶点的倒勾。</strong></p>
+</blockquote>
+
+<h4>各成员的两年修行去向</h4>
+
+<div class="arc">
+  <span class="arc-title">① 蒙奇·D·倒飞 → 女儿岛 / 婆罗门叛逃者岛</span>
+  <strong>师父</strong>：冥王雷利——曾是罗杰团副船长，婆罗门世家出走的逆子，现隐居闲鱼当老掌柜。<br>
+  <strong>三色霸气</strong>：
+  <ul>
+    <li><strong>见闻色 · 价波预知</strong>：能听到三秒后的咸鱼报价波动</li>
+    <li><strong>武装色 · 反鉴定铠甲</strong>：抵御任何"你这盒是盗版吧"的话术</li>
+    <li><strong>霸王色 · 镇店之威</strong>：往店里一站，弱小卖家立刻主动降价</li>
+  </ul>
+  <em>雷利："真正的强者，是即使没有任何认证证书，也能让所有人相信你手里这盒是正版。"</em>
+</div>
+
+<div class="arc">
+  <span class="arc-title">② 罗罗诺亚·倒罗 → 暗黑岛 / 鹰眼·米霍克的不砍价之城</span>
+  <strong>师父</strong>：世界最强砍价手米霍克。<strong>同居人</strong>：幽灵公主培隆——永远在直播"全世界不可能再降价"的负能量 UP 主。<br>
+  <strong>新技</strong>：「斩盘整体形势」——一刀把店铺切成"正版区/盗版区"两堆。<br>
+  <strong>必杀升级</strong>：从三刀流 → <strong>九刀流·阿修罗·原价归零</strong>，对方店主会哭着 1 元包邮回购。<br>
+  <em>米霍克："砍价手最重要的不是嘴。"&nbsp;&nbsp;倒罗："那是什么？"&nbsp;&nbsp;米霍克："是脸皮。"</em>
+</div>
+
+<div class="arc">
+  <span class="arc-title">③ 娜价美 → 天候之岛 / 汇率气象台</span>
+  漂浮 1 万米高空的科学城邦，学者们一辈子在研究"日元汇率·邮费·关税·黄牛风暴"四相气候。<br>
+  <strong>天候棒终极版</strong>：
+  <ul>
+    <li><strong>热浪</strong>：召唤"限时半价"促销天气</li>
+    <li><strong>雷暴</strong>：召唤"店家集体崩盘"事件</li>
+    <li><strong>彩虹之雾</strong>：让卖家短暂忘记自己的标价</li>
+  </ul>
+  副业：把全岛气候图偷下来出版了《世界倒勾航海图·四季版》。
+</div>
+
+<div class="arc">
+  <span class="arc-title">④ 乌索普·倒索普 → 波音群岛 / 钓鱼链接之森</span>
+  一座所有植物都是钓鱼链接、骗局插件、刷分账号的奇葩岛屿。<br>
+  <strong>师父</strong>：赫拉克勒斯ん（永远在句尾加「ん」的水军老师）。<br>
+  <strong>新技</strong>：「绿星·黄牛屠杀者」——种下一颗绿星，几小时后店铺会被一千个差评淹没。<br>
+  <strong>副技</strong>：植物可伪装成官方授权认证图标，骗过 99% 新手。<br>
+  <em>"我现在的箭，比赤罚大将的火还烫。"</em>
+</div>
+
+<div class="arc">
+  <span class="arc-title">⑤ 山治·倒治 → 欧卡马王国 / 伪娘踩雷大学</span>
+  全员伪娘 / 男娘 cosplay 圣地，数千居民都是男的。入学条件：穿洛丽塔装跑完一千个店铺刷差评。<br>
+  倒治拼命想逃——他的梦想是被女卖家温柔对待，而不是被一群伪娘强行教学。<br>
+  <strong>习得</strong>：「伪娘脚踩术·攻击 99 式」——以萌妹账号身份打差评，对方完全无法反驳。<br>
+  副作用：从此见到穿洛丽塔的人会下意识抽搐。<br>
+  <em>欧卡马国王临别赠言："温柔不分性别——但差评分。"</em>
+</div>
+
+<div class="arc">
+  <span class="arc-title">⑥ 托尼托尼·修图巴 → 鸟岛 / 手办鉴定圣地</span>
+  居民全是资深手办鉴定家，能用眼睛分辨 0.1mm 喷漆瑕疵。<br>
+  <strong>新技</strong>：
+  <ul>
+    <li><strong>七色变形修图术</strong>——瞬间把盗版盒P成正版盒</li>
+    <li><strong>Rumble Ball · PS 版</strong>——一次最多叠 7 个滤镜，叠到第 8 个就变成<strong>怪物·修图巴</strong>（自动生成全网最假水印）</li>
+  </ul>
+  副业：从此见到任何萝莉手办都能立刻判断真伪。
+</div>
+
+<div class="arc">
+  <span class="arc-title">⑦ 妮可·倒宾 → 龙舌兰狼岛 / 革命军根据地</span>
+  被婆罗门强迫劳动建桥的奴隶岛，铁链上锁着各路汉化民工。<strong>被革命军救出，亲见龙总司令（倒飞的亲爹）。</strong><br>
+  在革命军总部度过两年，学习了：
+  <ul>
+    <li>所有婆罗门家族的黑历史档案</li>
+    <li>五老星的真实姓名与住址</li>
+    <li>古代兵器<strong>乌拉诺斯</strong>的位置（她目前是世界上唯一知道的人）</li>
+    <li>800 年前空白史的部分真相</li>
+  </ul>
+  <strong>她现在比任何人都清楚倒飞将要面对的东西。</strong>重聚时她对倒飞露出温柔的微笑，但什么都没说。
+</div>
+
+<div class="arc">
+  <span class="arc-title">⑧ 弗兰奇·弗兰奇 → 卡拉库里岛 / AI 立绘研究中心</span>
+  贝加庞克博士的故乡，传说中的「AI 立绘第一研究所」。<br>
+  弗兰奇潜入研究所，盗读贝加庞克的未来工程笔记——含"让任何盗版图都能生成对应正版CG"的禁忌算法。<br>
+  把自己改造为 <strong>"AI 内嵌·弗兰奇 BF-37 自动修图版"</strong>，现在能看着盗版盒子从背部喷出对应正版立绘照片。<br>
+  <strong>新口号</strong>：「SUPER——AI 修图！」
+</div>
+
+<div class="arc">
+  <span class="arc-title">⑨ 布鲁克·布鲁克 → 地下盗版 OST 圈 / "Long Arm 海贼团"</span>
+  被大手盗版社团绑架去做翻唱奴隶。但他第一晚用《Bink 的酒·galgame ED 改编版》征服了整个团。<br>
+  化名「鼻歌の布鲁克」成为 galgame OST 翻唱第一巨星。<br>
+  两年间秘密发行 100+ 张盗版 OST 合集 + 8 张同人专辑，全部躲过版权扫描。<br>
+  <em>重聚第一句："Yohohoho——我现在已经是被通缉的音乐家了，大家请多关照。"</em>
+</div>
+
+<div class="arc">
+  <span class="arc-title">⑩ 甚平·拼夕夕鲸鲨 → 鱼人岛风暴 / 加入篇</span>
+  <strong>霍迪·琼斯事件</strong>：鱼人岛深处一群极端汉化组成员（「新鱼人海贼团」）发起暴乱，主张：
+  <ul>
+    <li>所有日文galgame都应该免费汉化并强制流通</li>
+    <li>不会日语的人没资格碰galgame</li>
+    <li>汉化组就该统治这个圈子</li>
+  </ul>
+  甚平作为前太阳海贼团成员，独自对抗整个霍迪派。战斗最高潮，他做出了人生最大决定：
+  <blockquote><p>"我已经不属于这片海了。拼多多招牌、百亿补贴渠道、王下七武海爵位——我全部交还。从今天起，<strong>我加入草帽倒勾团。</strong>"</p></blockquote>
+  入团仪式：用拼多多百亿补贴券作酒，与倒飞结为义兄弟。<br>
+  带来三样东西：
+  <ol>
+    <li>拼多多内部价格数据库</li>
+    <li>鱼人岛全部汉化组联系网</li>
+    <li>百亿补贴官方关系绿色通道</li>
+  </ol>
+</div>
+
+<h4>夏波帝诸岛的重聚</h4>
+<p><strong>夏波帝诸岛</strong> = 每两年举办一次的"全国 galgame 玩家线下大聚会"会场，全世界倒勾、玩家、卖家、汉化组都会到场。</p>
+<ul>
+  <li>倒罗第一个到，在街角喝酒等了三天</li>
+  <li>倒治到的时候被五个伪娘追着跑——欧卡马国王坚持要给他办送别会</li>
+  <li>倒飞从天而降，对所有人挥手：「好——我们要去鱼人岛了！」</li>
+  <li>全员上船时，娜价美按下天候棒——「热浪·促销暴雨」——整个夏波帝瞬间变成全场半价</li>
+  <li>海关闻讯赶来时，他们已经潜入海底</li>
+</ul>
+
+<h4>两年间的世界大事</h4>
+<table>
+  <thead><tr><th>时间</th><th>事件</th></tr></thead>
+  <tbody>
+    <tr><td>第 1 个月</td><td>顶上战争余波，白胡子的"亚克力立牌帝国"瞬间崩盘，无数小倒勾涌入争夺空缺</td></tr>
+    <tr><td>第 3 个月</td><td>黑胡子·黄毛D·咸 拿下白胡子部分版图，跻身<strong>新四倒皇</strong></td></tr>
+    <tr><td>第 5 个月</td><td>海关元帅战国退休。赤罚 vs 青查 在线下用海关印章决斗 10 天 10 夜，最后<strong>赤罚胜出</strong>成为新元帅。青查心灰意冷脱离海关，成为「自由审稿人」</td></tr>
+    <tr><td>第 7 个月</td><td>红发倒克斯正式跻身<strong>新四倒皇</strong></td></tr>
+    <tr><td>第 9 个月</td><td>革命军总司令龙在某次匿名直播里<strong>公开砸了圣地的招牌</strong>，全网震动</td></tr>
+    <tr><td>第 11 个月</td><td>七武海制度迎来重大改革，多弗朗明哥趁机扩张国Gal工厂</td></tr>
+    <tr><td>第 14 个月</td><td>倒飞的悬赏金：从 4 亿 → 因为一系列莫名其妙的原因 → <strong>依然是 4 亿</strong>（海关觉得他没立新功，不给加）</td></tr>
+    <tr><td>第 18 个月</td><td>鱼人岛霍迪事件爆发，甚平做出投奔决定</td></tr>
+    <tr><td>第 22 个月</td><td>倒罗在暗黑岛击败鹰眼弟子，得到了传说中的<strong>「和道一文字·砍价改」</strong></td></tr>
+    <tr><td>第 24 个月</td><td>全员在夏波帝重聚</td></tr>
+  </tbody>
+</table>
+
+<h4>间章末尾的隐藏镜头</h4>
+<blockquote>
+  <p>在世界政府最高层，<strong>圣·罗斯瓦尔德</strong>端着茶看着情报：</p>
+  <p>「……『草帽倒勾团』全员归队？哈，乡下小屁孩懂什么。」</p>
+  <p>他身后的房间里，<strong>三幅画像</strong>静静挂着——草帽女孩、罗杰、白胡子。</p>
+  <p>房间最深处，<strong>Im 大人的剪影</strong>抬起了头：</p>
+  <p style="text-align:center;font-size:18px;color:var(--red)"><strong>「……加一幅画。」</strong></p>
+</blockquote>
+
+<h4><span class="tag">Arc 11</span> 鱼人岛——甚平篇</h4>
+<p>海底之国与"百亿补贴拼夕夕鲸鲨"相遇。揭示 <strong>大秘宝亲签色纸</strong> 最早是在鱼人岛被复刻的——这里曾是galgame正版与盗版的分界海域。</p>
+
+<h4><span class="tag">Arc 12</span> 庞克哈萨德 & 德雷斯罗萨——倒克斯家族篇</h4>
+<ul>
+  <li>与七武海 <strong>多弗朗明哥</strong> 对决，他正是 <strong>倒克斯家族的当家</strong></li>
+  <li>整个家族经营 <strong>国Gal果实工厂</strong>（SMILE工厂），强迫小朋友吃下劣质国gal，让他们一辈子变成"只会喊老婆"的废人</li>
+  <li>多弗朗明哥的弟弟 <strong>柯拉松</strong>（罗西南特）正是另一位"倒克斯"——他用生命教导少年特拉法尔加·罗：</li>
+</ul>
+<blockquote><p>"倒勾啊……一定要走<strong>海关</strong>啊。"</p></blockquote>
+<p>然而罗最终成了倒勾医生。</p>
+
+<h4><span class="tag">Arc 13</span> 和之国——百兽凯多</h4>
+<ul>
+  <li>倒皇 <strong>凯多·百兽</strong> 统治着Fumo产业链</li>
+  <li>他经营的工厂产出的Fumo捏起来"超有手感"，因此被称为"世界最硬挤压测试者"</li>
+  <li>战斗高潮：倒飞掌握第五档——<strong>Gear 5·觉醒の橡胶</strong>，能让Fumo会自己跳舞拒绝被挤压</li>
+</ul>
+
+<h4><span class="tag">Arc 14</span> 万国——大妈</h4>
+<ul>
+  <li>倒皇 <strong>夏洛特·琳琳</strong> 统治着色纸产业链</li>
+  <li>她想要把 <strong>全世界的亲签色纸</strong> 装裱在一面墙上拍照炫耀</li>
+  <li>倒飞团联合茶胡子海贼团一起把她的"色纸城堡"推倒</li>
+</ul>
+
+<h4><span class="tag">Arc 15</span> 终章·拉夫德鲁（Laugh Tale）</h4>
+<p>一切线索指向 <strong>最后的咸鱼链接</strong>。倒飞团登陆传说之岛，找到旮旯·D·罗杰留下的真相：</p>
+<blockquote>
+  <p><strong>大秘宝亲签色纸</strong>，其实是当年绘师在闭店前，含着泪给每一位还相信galgame的玩家亲笔签下的那张色纸。</p>
+  <p>它<strong>没有任何金钱价值</strong>——它只属于 <strong>"最后还愿意为爱发电的人"</strong>。</p>
+</blockquote>
+
+<hr>
+
+<h2 id="easter">伍 · 主要伏笔与彩蛋</h2>
+<ol>
+  <li><strong>海关三大将的茶歇</strong>：每天下午三点准时关闭口岸，是全世界倒勾发货的黄金窗口</li>
+  <li><strong>近海之主</strong>：风车村港口的巨型海怪，其实是初代走私船工会的老大，被钢爪一拳打沉后转职成观光项目</li>
+  <li><strong>D之意志</strong>：所有名字中带"D"的人，命中注定要去 <strong>代购</strong>（D = Daigou）</li>
+  <li><strong>黄猿大将的真实身份</strong>：闲鱼官方运营</li>
+  <li><strong>黑胡子的两颗果实之谜</strong>：他先吃了《暗夜の闇》，再吃了白胡子的《震動の実》——首次证明 <strong>一个人也可以同时拥有两部正版和盗版</strong></li>
+  <li><strong>罗杰处刑前的真实对话</strong>：
+    <blockquote>
+      <p>海关元帅："罗杰，你藏在哪了？"</p>
+      <p>罗杰："我把它们……藏在了<strong>咸鱼拍卖</strong>里。"</p>
+      <p>海关元帅："…………那不就是公开挂出来了吗？"</p>
+      <p>罗杰：<strong>"所以才没人找得到啊。"</strong></p>
+    </blockquote>
+  </li>
+</ol>
+
+<hr>
+
+<h2 id="races">陆 · 种族与社会结构（深掘篇）</h2>
+
+<h3>种族总览</h3>
+<table>
+  <thead>
+    <tr><th>One Piece 种族</th><th>大倒勾时代对应</th><th>圈内生态位</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>天龙人</td><td>圣地·婆罗门</td><td>终极藏家，看不起所有平民</td></tr>
+    <tr><td>人类</td><td>一般玩家</td><td>永远在等汉化的大多数</td></tr>
+    <tr><td>鱼人 / 人鱼</td><td>汉化组 / 同人贩售圈</td><td>维持产业流通的"地下劳工"</td></tr>
+    <tr><td>巨人族</td><td>昭和老宅 · 元祖萌豚</td><td>PC-98 时代的硬核老前辈</td></tr>
+    <tr><td>矮人族（汤汤族）</td><td>民间汉化小作坊 / 修补丁工</td><td>手巧、人傻、易骗</td></tr>
+    <tr><td>长臂族</td><td>跑展代购党</td><td>手能伸到日本任何展会</td></tr>
+    <tr><td>长腿族</td><td>秒杀脚本党 / 抢购飞毛腿</td><td>0.01 秒 add to cart</td></tr>
+    <tr><td>蛇颈族（女儿岛）</td><td>乙女向 / 女性向圈</td><td>纯女性的平行宇宙</td></tr>
+    <tr><td>牛鬼族（毛皮族）</td><td>兽控圈 / VTuber 皮套党</td><td>月光下变身（开播后掉马甲）</td></tr>
+    <tr><td>三眼族</td><td>内测员 / 提前看到样品的人</td><td>能听到「未发售gal之声」</td></tr>
+    <tr><td>露纳利亚族</td><td>奈须级 / 麻枝级初代神主</td><td>从无到有创造业界的人</td></tr>
+    <tr><td>月之民 / 古代人</td><td>PC-98 / X68000 元祖玩家</td><td>平台迁移后留下"古代兵器"</td></tr>
+    <tr><td>空岛人（香迪亚 vs 修达）</td><td>PC原生派 vs 主机移植派</td><td>两派为同一片市场打了 400 年</td></tr>
+    <tr><td>Pacifista（人造人）</td><td>AI 立绘党 / V家虚拟偶像</td><td>引起业界世纪争议的新物种</td></tr>
+  </tbody>
+</table>
+
+<h3>天龙人 = 圣地婆罗门</h3>
+
+<h4>圣地·玛丽乔亚 → 秋叶原中央祭坛</h4>
+<p>世界的最高点，位于「红土大陆」（中央通り）的山顶。由 <strong>800 年前缔结的某份创世盟约</strong>——即 <strong>1995 年 Galgame 元年（同级生 2 发售那一年）</strong> 的初代藏家世家共同建立。</p>
+
+<h4>婆罗门的特征</h4>
+<ul>
+  <li><strong>戴气泡头盔</strong>：拒绝呼吸跟平民同一片空气。盔内灌的是 <em>从 Animate 本店空运的进口空气罐</em>。</li>
+  <li><strong>称谓必带"圣"字</strong>：圣·查尔罗斯、圣·罗斯瓦尔德、圣·乌米加米拉……</li>
+  <li><strong>永远处于三种状态之一</strong>：刚从日本回来正在炫耀战利品；准备去日本正在嘲笑别人没去；没在日本正在嘲笑别人怎么会去。</li>
+  <li><strong>从不上闲鱼</strong>：他们有私人渠道直通 <em>骏河屋拍卖会·VIP房间</em> / <em>MANDARAKE 闭店专场</em>。</li>
+  <li><strong>他们持有的不是 galgame，是"galgame 真迹"</strong>：初版原盘、亲签色纸、staff 内购样品、绘师私人收藏品。</li>
+</ul>
+
+<h4>五老星 = 五位至尊老藏家</h4>
+<p>galgame 圈历史最久、家底最厚、年龄最大的五位活体化石。亲眼见证过 Leaf 创社、Key 第一次会议、Type-Moon 还在做同人时、ELF 倒闭前最后一夜、Alicesoft 周年祭第一回。脑子里就是一部活的「galgame 全史」，但 <strong>拒绝告诉任何后辈</strong>——因为「<em>让平民也懂，那这个圈子还有什么尊贵感？</em>」</p>
+
+<h4>婆罗门的真实特权</h4>
+<ul>
+  <li><strong>奴隶蹄印权</strong>：可以在任何汉化组成员、代购、修图工身上烙下「漢化担当 #042」之类的内部编号。即使解放，烙印一辈子无法洗掉。</li>
+  <li><strong>打个响指，整个圈子封禁某人</strong>：圣·罗斯瓦尔德推特一发，所有店家秒拒接对方订单。这是 <strong>比海关三大将更可怕的私刑权</strong>。</li>
+  <li><strong>"天龙人若死，海关召集大将"</strong>：任何人在圣地动了婆罗门一根毛，海关元帅亲自带三大将出动。</li>
+</ul>
+
+<h4>失格天龙人 · 多弗朗明哥（重磅设定）</h4>
+<ul>
+  <li><strong>倒克斯家族</strong>原本是天龙人世家</li>
+  <li>多弗朗明哥的父亲 <strong>圣·霍米古</strong> 看不下去婆罗门奢靡，主动放弃身份回到平民世界</li>
+  <li>结果全家被平民「为爱发电党」围攻烧毁——<em>"你们装什么平民，去死吧装逼怪！"</em></li>
+  <li>童年的多弗朗明哥因此 <strong>同时仇恨婆罗门和仇恨平民</strong>，立志让「<strong>全世界都吃国Gal果实（SMILE）</strong>」——大家一起堕落，谁也别瞧不起谁</li>
+  <li>这是他建立国 Gal 工厂的真实动机</li>
+</ul>
+
+<h3>鱼人 = 汉化组 / 同人贩售圈</h3>
+
+<h4>鱼人岛 = 深海·SS論壇 / 2ch 漢化板 / 早期 galgame 贴吧</h4>
+<p>位于 1 万米深海（搜索引擎都搜不到），有自己的货币（论坛积分）、自己的语言（缩写黑话）、自己的政府（吧主）。</p>
+
+<h4>历史伤痕</h4>
+<ul>
+  <li><strong>曾被天龙人公开蓄奴</strong>：婆罗门把汉化组员当成免费劳动力，强迫他们汉化自己想看的本子，做完之后 <strong>以原作者身份发出来</strong></li>
+  <li><strong>太阳海贼团 = 老虎 = 传奇汉化组首任组长</strong>：第一个公开宣告「漢化是无偿的，但请你尊重我们」的人，被婆罗门暗杀</li>
+  <li><strong>阿龙 = 因被婆罗门盗用作品而黑化的二代组长</strong>：从此专门把婆罗门小姨子的 Excel 拿来做汉化进度表报复世界</li>
+  <li><strong>甚平·拼夕夕鲸鲨</strong> = 改邪归正派，相信「百亿补贴可以让更多人接触正版」，最后转职做 <strong>拼多多官方鉴定师</strong></li>
+</ul>
+
+<h4>人鱼族</h4>
+<ul>
+  <li>美少女形态的鱼人 = 专门做美少女声优 cosplay 的汉化美工</li>
+  <li><strong>白星公主</strong> = 某神级汉化组的吉祥物·万人迷美工小姐姐</li>
+  <li>她体内封印着古代兵器 <strong>海皇波塞冬</strong> = 「能让整个咸鱼平台价格瞬间崩盘」的发文权限</li>
+</ul>
+
+<h3>巨人族 = 昭和老宅 · 元祖萌豚</h3>
+<p>艾尔巴夫 = 「九十年代Galgame殿堂」论坛。居民身高 5 米起步，<strong>家里柜子总长度 5 米起步</strong>。</p>
+<p>战士守则：</p>
+<ol>
+  <li>一旦开了一部 galgame，<strong>所有路线必须打完</strong>才能弃游</li>
+  <li>不允许跳 CG</li>
+  <li>看到萝莉立绘必须流泪</li>
+</ol>
+<p>著名巨人：<strong>道力·Y·哈古瓦尔</strong> = 90 年代某传奇藏家，家中同级生1初回限定盘 × 47 张。<strong>彗星祭</strong> = 每年纪念《同级生》《雫》《痕》发售的庆典。</p>
+
+<h3>矮人族 = 民间汉化小作坊</h3>
+<p>汤汤陆陆王国 = 某个被多弗朗明哥控制的汉化作坊。身高 20cm，但 <strong>手指灵巧度世界第一</strong>。容易被骗：你随便说"<em>这个游戏我朋友翻译完了别再做了</em>"他们就会立刻收手。多弗朗明哥用谎言把整族关在 <strong>国Gal果实工厂</strong> 里，强迫他们生产机翻级国产 galgame。解放后大量加入 <strong>草帽倒勾团 / 革命军</strong>。</p>
+
+<h3>牛鬼族 = VTuber 皮套党</h3>
+<p>佐乌 = 千年长寿的兽设 / VT 综合论坛（毛茸茸吧）。居民全员兽耳 / 兽尾 / 兽形。<strong>月光下变身 Sulong 形态</strong> = 直播打赏破 10 万后被迫露脸。公爵犬（白天班）vs 猫蝮蛇（夜班）= <strong>昼 V vs 夜 V 永远在轮班</strong>。锦卫门 = 从外面来的访客，唯一一个穿和服的人（其实是从和之国流亡来的乙女向 V）。</p>
+
+<h3>露纳利亚族 = 神主级初代原画师</h3>
+<ul>
+  <li>在一切恶劣环境下生存：盗版横行年代、市场崩盘年代、版权战争年代——都活下来了</li>
+  <li>能控制业火：他们一句话就能让整个圈子「<strong>纯爱战神</strong>」式燃起来</li>
+  <li>濒临灭绝，全世界仅存数人</li>
+  <li>对应 <strong>奈须きのこ级、麻枝准级、丸户史明级</strong> 这种屈指可数的存在</li>
+  <li>海关秘密囚禁的"King"（炎烧海军）= 某位被海关版权部门带走调查多年的传奇绘师，传闻其实是露纳利亚族最后的存活者</li>
+</ul>
+
+<h3>革命军 = 反婆罗门解放阵线</h3>
+
+<h4>总司令 · 蒙奇·D·龙 = 倒飞失踪多年的亲爹</h4>
+<ul>
+  <li>原本是 <strong>海关元帅候选</strong>（钢爪之子）</li>
+  <li>亲眼看到圣·查尔罗斯 <strong>抢走一位小女孩攒了三年钱才买到的限定盒，当场踩碎扔进海里</strong></li>
+  <li>当场叛变，建立「反婆罗门解放阵线」</li>
+  <li>核心理念：「<strong>每个人都有权拥有自己心爱的女主角。</strong>」</li>
+</ul>
+<p>父子三代各走极端：</p>
+<ul>
+  <li><strong>爷爷·钢爪</strong> = 海关英雄</li>
+  <li><strong>父亲·龙</strong> = 革命军总司令</li>
+  <li><strong>儿子·倒飞</strong> = 倒勾王候选</li>
+</ul>
+<p>三人都在反抗这个世界，但 <strong>从三个不同方向</strong>。</p>
+
+<h3>社会金字塔结构</h3>
+
+<pre style="background:var(--quote);padding:14px;border-radius:6px;border:1px solid var(--line);overflow-x:auto;font-size:13px;line-height:1.5;font-family:ui-monospace,'SF Mono',Consolas,monospace;color:var(--ink)">
+          ┌───────────────────────────────┐
+          │ Im 大人 / 上海绅士同盟首领         │ ← 没人见过的最终 BOSS
+          │      （5ch 匿名神级 ID）          │
+          └───────────────────────────────┘
+                          │
+          ┌───────────────────────────────┐
+          │   五老星 · 五大祖师爷藏家           │
+          └───────────────────────────────┘
+                          │
+          ┌───────────────────────────────┐
+          │   天龙人 · 圣地婆罗门世家           │ ← 0.1% 人口，垄断 80% 正品
+          └───────────────────────────────┘
+                          │
+          ┌───────────────────────────────┐
+          │  七武海 · 王下大开票户 / 海关白名单  │
+          └───────────────────────────────┘
+                          │
+          ┌───────────────────────────────┐
+          │   海关 · 版权审核 / 大将 / 元帅      │
+          └───────────────────────────────┘
+                          │
+          ┌───────────────────────────────┐
+          │     一般人类玩家（大多数）          │
+          └───────────────────────────────┘
+   ═══════════[海平面 · 版权管辖线]═══════════
+                          │
+          ┌───────────────────────────────┐
+          │   鱼人 / 人鱼 · 汉化组 · 同人贩售    │
+          └───────────────────────────────┘
+                          │
+          ┌───────────────────────────────┐
+          │ 矮人 / 巨人 · 小作坊 / 老宅藏家      │
+          └───────────────────────────────┘
+                          │
+          ┌───────────────────────────────┐
+          │   海贼 / 倒勾 · 最底层流亡者         │ ← 草帽倒勾团在这里
+          └───────────────────────────────┘
+</pre>
+
+<h3>五个改变整个世界观的剧情联结</h3>
+
+<ol>
+  <li><strong>「800 年前的空白历史」= 1995 年前的 galgame 史前史</strong><br>
+      五老星 / 婆罗门家族不允许任何人提及的禁忌：<em>1995 年以前，galgame 是免费在 BBS 上分享的。没有版权、没有商业、没有黄牛。</em> 真正的"乌托邦"。所有 PC-98 时代的母盘已被婆罗门系统性销毁。</li>
+
+  <li><strong>「D 之意志」= 代购的意志，也是反婆罗门的意志</strong><br>
+      所有名字带 D 的人，命中注定要 <strong>挑战婆罗门体系</strong>。他们相信：「<em>正版应该面向所有人，而不只是 0.1% 的家境</em>」。</li>
+
+  <li><strong>多弗朗明哥的双重报复</strong><br>
+      对婆罗门：你们抛弃了我家，那我就在你们脚下建一个黑色平行经济。<br>
+      对平民：你们烧死了我父亲，那我就让你们全部沉沦在国Gal果实里。<br>
+      他既是反派，又是某种意义上的"扭曲的革命者"。</li>
+
+  <li><strong>顶上战争的真实起因</strong><br>
+      艾斯被处刑只是 <em>表面原因</em>。真实起因是：<strong>草帽倒飞在圣地一拳打飞了圣·查尔罗斯</strong>——这一拳让全世界婆罗门集体震怒，海关被迫发动总力战，必须公开处决倒勾以维护婆罗门体制的尊严。<strong>这是平民阶级第一次公开打了婆罗门的脸。</strong></li>
+
+  <li><strong>「Im 大人」= 圈子里没人见过的最终 BOSS</strong>
+    <ul>
+      <li>五老星都要向他下跪</li>
+      <li>通过一个 <strong>5ch 匿名 ID</strong> 操纵整个圈子</li>
+      <li>拥有一种能力：「<strong>能让任何一部 galgame 从这个世界上消失</strong>」（删除原盘）</li>
+      <li>他屋子里有三幅画像：
+        <ol>
+          <li>一个戴草帽的女孩（古代王国的最后公主）</li>
+          <li>罗杰</li>
+          <li>白胡子</li>
+        </ol>
+        ——他们都曾威胁要打破婆罗门体制，都被他亲手抹去。</li>
+      <li>而下一幅画像，即将是 <strong>蒙奇·D·倒飞</strong>。</li>
+    </ul>
+  </li>
+</ol>
+
+<hr>
+
+<h2 id="theme">柒 · 主题</h2>
+
+<blockquote>
+  <p>这是一个关于「<strong>为爱发电</strong>」与「<strong>绝版收藏</strong>」的故事。</p>
+  <p>在大倒勾时代，每个人都在追逐稀缺的、消失的、再也回不来的东西。</p>
+  <p>海关说："这些都是违禁品。"</p>
+  <p>倒勾说："这些都是我们的青春。"</p>
+  <p>而草帽倒飞只是笑着说——</p>
+  <p style="text-align:center;font-size:22px;color:var(--red)"><strong>"那就去找吧。"</strong></p>
+</blockquote>
+
+<div class="footer">
+  — 完 —<br>
+  <small>大倒勾时代 · The Great Scalper Era · 故事大纲 · 仅供圈内娱乐</small>
+</div>
+
+</div>
+</body>
+</html>
