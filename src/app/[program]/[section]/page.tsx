@@ -4,8 +4,6 @@ import { getProgram, getSection } from "@/lib/curriculum";
 import { NavCard } from "@/components/Card";
 import { SiteHeader } from "@/components/SiteHeader";
 
-const accents = ["indigo", "violet", "fuchsia", "teal", "amber", "rose"] as const;
-
 export default async function SectionPage({
   params,
 }: {
@@ -41,7 +39,7 @@ export default async function SectionPage({
           <div className="flex items-center gap-2">
             <Link
               href={`/${program.slug}/${section.slug}/forum`}
-              className="rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 px-3.5 py-1.5 text-xs font-semibold text-white shadow-md shadow-indigo-500/25 transition hover:from-indigo-400 hover:to-violet-400"
+              className="rounded-lg bg-brand-800 px-3.5 py-1.5 text-xs font-semibold text-white transition hover:bg-brand-700 dark:bg-brand-200 dark:text-brand-950 dark:hover:bg-brand-100"
             >
               Open forum →
             </Link>
@@ -55,7 +53,7 @@ export default async function SectionPage({
         </header>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {section.subjects.map((sub, i) => {
+          {section.subjects.map((sub) => {
             // Subjects with redirectTo link directly to their canonical home,
             // skipping the alias page entirely. The alias page also handles
             // direct URL access via a server redirect.
@@ -69,9 +67,7 @@ export default async function SectionPage({
                 eyebrow={sub.redirectTo ? "Alias →" : "Subject"}
                 title={sub.name}
                 description={sub.caption}
-                badge={sub.redirectTo ? "Section 4" : undefined}
-                accent={accents[i % accents.length]}
-              />
+                badge={sub.redirectTo ? "Section 4" : undefined}              />
             );
           })}
         </div>

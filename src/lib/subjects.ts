@@ -6,8 +6,6 @@
 
 import type { Localized } from "./i18n";
 
-export type Accent = "amber" | "indigo" | "emerald" | "rose";
-
 export type Topic = {
   code: string;
   name: Localized;
@@ -28,7 +26,6 @@ export type ReviewSubject = {
   short: Localized;
   tagline: Localized;
   monogram: string;
-  accent: Accent;
   /** First course is the default and drives the home-page progress. */
   courses: Course[];
   extras?: { label: Localized; href: string }[];
@@ -55,7 +52,6 @@ const economics: ReviewSubject = {
     en: "Micro, macro and the global economy — diagrams, definitions and policy evaluation.",
   },
   monogram: "Ec",
-  accent: "amber",
   uploadHref: "/ib/section-4/economics",
   courses: [
     {
@@ -131,7 +127,6 @@ const physics: ReviewSubject = {
     en: "Full Themes A–E notes: derivations, graphs and worked examples.",
   },
   monogram: "Ph",
-  accent: "indigo",
   uploadHref: "/ib/section-5/physics",
   extras: [
     { label: { zh: "综合复习：测量与力学", en: "Combined review: measurement & mechanics" }, href: `${PHYSICS_NOTES}/rev.html` },
@@ -217,7 +212,6 @@ const cs: ReviewSubject = {
     en: "Computer fundamentals, networks, databases, machine learning and programming.",
   },
   monogram: "CS",
-  accent: "emerald",
   uploadHref: "/ib/section-6/cs",
   courses: [
     {
@@ -374,7 +368,6 @@ const math: ReviewSubject = {
     en: "Analysis & Approaches: algebra, functions, trigonometry, statistics and calculus.",
   },
   monogram: "Ma",
-  accent: "rose",
   uploadHref: "/ib/section-2/math-aahl",
   courses: [
     { slug: "aa-hl", name: { zh: "AA HL", en: "AA HL" }, groups: aaGroups },

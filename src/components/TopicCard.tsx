@@ -1,31 +1,27 @@
-import { ACCENT_STYLES } from "@/components/accents";
 import { pick, t, type Lang } from "@/lib/i18n";
-import type { Accent, Topic } from "@/lib/subjects";
+import type { Topic } from "@/lib/subjects";
 
-export function TopicCard({ topic, lang, accent }: { topic: Topic; lang: Lang; accent: Accent }) {
-  const s = ACCENT_STYLES[accent];
+export function TopicCard({ topic, lang }: { topic: Topic; lang: Lang }) {
   const ready = topic.status === "ready" && topic.href;
 
   const body = (
     <>
       <div className="flex items-center justify-between gap-2">
-        <span className={`font-mono text-xs font-semibold ${s.text}`}>{topic.code}</span>
-        <span className="flex items-center gap-1.5">
+        <span className="font-mono text-xs font-semibold text-brand-700 dark:text-brand-300">
+          {topic.code}
+        </span>
+        <span className="flex items-center gap-1.5 text-[10px] font-medium">
           {topic.hlOnly && (
-            <span className="rounded-full bg-slate-900 px-2 py-0.5 text-[10px] font-semibold text-white dark:bg-white dark:text-slate-900">
+            <span className="rounded border border-brand-200 px-1.5 py-px text-brand-700 dark:border-brand-400/40 dark:text-brand-300">
               HL
             </span>
           )}
-          <span
-            className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${
-              ready ? s.soft : "bg-slate-200/80 text-slate-500 dark:bg-white/5 dark:text-slate-400"
-            }`}
-          >
-            {t(ready ? "subject.ready" : "subject.soon", lang)}
-          </span>
+          {!ready && (
+            <span className="text-slate-400 dark:text-slate-500">{t("subject.soon", lang)}</span>
+          )}
         </span>
       </div>
-      <div className="mt-2 text-sm font-semibold leading-snug text-slate-900 dark:text-white">
+      <div className="mt-2 text-sm font-medium leading-snug text-slate-900 dark:text-white">
         {pick(topic.name, lang)}
       </div>
       {lang === "zh" && (
@@ -40,7 +36,7 @@ export function TopicCard({ topic, lang, accent }: { topic: Topic; lang: Lang; a
     return (
       <a
         href={topic.href}
-        className={`block rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm transition hover:-translate-y-0.5 hover:bg-white hover:shadow-md dark:border-white/10 dark:bg-slate-900/50 dark:shadow-none dark:hover:bg-slate-900/80 ${s.hoverBorder}`}
+        className="block rounded-xl border border-slate-200 bg-white p-4 transition hover:border-brand-300 hover:bg-brand-50/40 dark:border-white/10 dark:bg-slate-900/60 dark:hover:border-brand-400/50"
       >
         {body}
       </a>
@@ -48,7 +44,7 @@ export function TopicCard({ topic, lang, accent }: { topic: Topic; lang: Lang; a
   }
 
   return (
-    <div className="rounded-xl border border-dashed border-slate-300/80 bg-white/40 p-4 opacity-75 dark:border-white/10 dark:bg-slate-900/20">
+    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-slate-500 dark:border-white/5 dark:bg-slate-900/30">
       {body}
     </div>
   );

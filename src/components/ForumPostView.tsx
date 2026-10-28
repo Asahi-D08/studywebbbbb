@@ -185,7 +185,7 @@ function SignInPrompt({
     <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-100/50 p-5 text-sm text-slate-600 dark:border-white/10 dark:bg-slate-900/30 dark:text-slate-300">
       <a
         href={`/login?next=${encodeURIComponent(next)}`}
-        className="font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-300 dark:hover:text-indigo-200"
+        className="font-medium text-brand-600 hover:text-brand-500 dark:text-brand-300 dark:hover:text-brand-200"
       >
         Sign in
       </a>{" "}

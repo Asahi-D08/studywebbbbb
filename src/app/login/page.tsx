@@ -29,7 +29,7 @@ export default async function LoginPage({
       </div>
       <div className="mb-8 text-center">
         <Link href="/" className="inline-flex items-center gap-3">
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-indigo-400 via-violet-400 to-fuchsia-400 text-sm font-bold text-slate-950 shadow-lg shadow-indigo-500/30">
+          <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-800 text-sm font-bold text-white dark:bg-brand-200 dark:text-brand-950">
             SW
           </span>
           <span className="text-lg font-semibold text-slate-900 dark:text-white">

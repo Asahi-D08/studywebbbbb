@@ -163,7 +163,7 @@ function NoteItem({
     "rounded-lg px-2.5 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-200/80 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white";
 
   return (
-    <li className="overflow-hidden rounded-2xl border border-slate-200/90 bg-white/60 transition hover:border-indigo-200 dark:border-white/10 dark:bg-slate-900/40 dark:hover:border-white/20">
+    <li className="overflow-hidden rounded-2xl border border-slate-200/90 bg-white/60 transition hover:border-brand-200 dark:border-white/10 dark:bg-slate-900/40 dark:hover:border-white/20">
       <div className="flex items-start gap-4 p-4">
         <Glyph kind={note.kind} />
         <div className="min-w-0 flex-1">
@@ -204,7 +204,7 @@ function NoteItem({
               </a>
               <a
                 href={`/api/files/${note.id}?download=1`}
-                className="rounded-lg px-2.5 py-1.5 text-xs font-medium text-teal-700 hover:bg-teal-100 dark:text-teal-300 dark:hover:bg-teal-500/10 dark:hover:text-teal-200"
+                className="rounded-lg px-2.5 py-1.5 text-xs font-medium text-brand-700 hover:bg-brand-100 dark:text-brand-300 dark:hover:bg-brand-500/10 dark:hover:text-brand-200"
               >
                 Save locally
               </a>
@@ -214,7 +214,7 @@ function NoteItem({
             <button
               type="button"
               onClick={saveTextLocally}
-              className="rounded-lg px-2.5 py-1.5 text-xs font-medium text-teal-700 hover:bg-teal-100 dark:text-teal-300 dark:hover:bg-teal-500/10 dark:hover:text-teal-200"
+              className="rounded-lg px-2.5 py-1.5 text-xs font-medium text-brand-700 hover:bg-brand-100 dark:text-brand-300 dark:hover:bg-brand-500/10 dark:hover:text-brand-200"
             >
               Save locally
             </button>
@@ -225,7 +225,7 @@ function NoteItem({
               onClick={onCopyToMine}
               disabled={copying}
               title="Create a private copy under Private"
-              className="rounded-lg px-2.5 py-1.5 text-xs font-medium text-amber-800 hover:bg-amber-100 disabled:opacity-50 dark:text-amber-200 dark:hover:bg-amber-500/10 dark:hover:text-amber-100"
+              className="rounded-lg px-2.5 py-1.5 text-xs font-medium text-brand-800 hover:bg-brand-100 disabled:opacity-50 dark:text-brand-200 dark:hover:bg-brand-500/10 dark:hover:text-brand-100"
             >
               {copying ? "…" : "Copy to my notes"}
             </button>
@@ -237,7 +237,7 @@ function NoteItem({
                 onClick={onToggleShare}
                 disabled={togglingShare}
                 title={note.shared ? "Move to Private" : "Move to Sharing area"}
-                className="rounded-lg px-2.5 py-1.5 text-xs font-medium text-indigo-600 hover:bg-indigo-100 disabled:opacity-50 dark:text-indigo-300 dark:hover:bg-indigo-500/10 dark:hover:text-indigo-200"
+                className="rounded-lg px-2.5 py-1.5 text-xs font-medium text-brand-600 hover:bg-brand-100 disabled:opacity-50 dark:text-brand-300 dark:hover:bg-brand-500/10 dark:hover:text-brand-200"
               >
                 {togglingShare ? "…" : note.shared ? "Unshare" : "Share"}
               </button>
@@ -274,7 +274,7 @@ function NoteItem({
 
 function SharedBadge({ shared }: { shared: boolean }) {
   return shared ? (
-    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-800 dark:bg-emerald-500/15 dark:text-emerald-300">
+    <span className="rounded-full bg-brand-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-brand-800 dark:bg-brand-500/15 dark:text-brand-300">
       Shared
     </span>
   ) : (
@@ -285,11 +285,6 @@ function SharedBadge({ shared }: { shared: boolean }) {
 }
 
 function Glyph({ kind }: { kind: NoteRecord["kind"] }) {
-  const styles: Record<NoteRecord["kind"], string> = {
-    text: "from-indigo-400 to-violet-500",
-    file: "from-amber-400 to-rose-500",
-    image: "from-teal-400 to-emerald-500",
-  };
   const labels: Record<NoteRecord["kind"], string> = {
     text: "T",
     file: "F",
@@ -297,7 +292,7 @@ function Glyph({ kind }: { kind: NoteRecord["kind"] }) {
   };
   return (
     <div
-      className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br ${styles[kind]} text-sm font-bold text-slate-950`}
+      className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-sm font-bold text-brand-800 dark:bg-brand-500/15 dark:text-brand-200"
     >
       {labels[kind]}
     </div>

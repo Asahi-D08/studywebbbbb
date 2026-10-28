@@ -12,12 +12,12 @@ html.dark {
 }
 
 :root {
-  --background: #f8fafc;
+  --background: #f7f8fa;
   --foreground: #0f172a;
 }
 
 .dark {
-  --background: #050816;
+  --background: #0b1220;
   --foreground: #e6e8ef;
 }
 
@@ -26,6 +26,21 @@ html.dark {
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+/* The site's single accent colour (navy). Red is reserved for errors and deletes. */
+@theme {
+  --color-brand-50: #eef3f9;
+  --color-brand-100: #d9e3f0;
+  --color-brand-200: #b6c8e0;
+  --color-brand-300: #8aa7cb;
+  --color-brand-400: #5d82b0;
+  --color-brand-500: #345f93;
+  --color-brand-600: #234b7a;
+  --color-brand-700: #1b3a61;
+  --color-brand-800: #152d4b;
+  --color-brand-900: #0f2138;
+  --color-brand-950: #0a1626;
 }
 
 html,
@@ -37,27 +52,15 @@ body {
 
 body {
   min-height: 100%;
-  background-image:
-    radial-gradient(60rem 40rem at 80% -10%, rgba(99, 102, 241, 0.14), transparent 60%),
-    radial-gradient(50rem 35rem at -10% 10%, rgba(217, 70, 239, 0.08), transparent 60%),
-    radial-gradient(40rem 30rem at 50% 110%, rgba(20, 184, 166, 0.08), transparent 60%);
-  background-attachment: fixed;
-}
-
-.dark body {
-  background-image:
-    radial-gradient(60rem 40rem at 80% -10%, rgba(99, 102, 241, 0.18), transparent 60%),
-    radial-gradient(50rem 35rem at -10% 10%, rgba(217, 70, 239, 0.12), transparent 60%),
-    radial-gradient(40rem 30rem at 50% 110%, rgba(20, 184, 166, 0.12), transparent 60%);
 }
 
 ::selection {
-  background: rgba(99, 102, 241, 0.25);
+  background: rgba(52, 95, 147, 0.25);
   color: inherit;
 }
 
 .dark ::selection {
-  background: rgba(129, 140, 248, 0.35);
+  background: rgba(138, 167, 203, 0.35);
   color: #fff;
 }
 

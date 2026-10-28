@@ -32,7 +32,7 @@ export function UploadSidebar({
       </p>
       <Link
         href={`/login?next=${encodeURIComponent(loginNextPath)}`}
-        className="mt-5 inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:from-indigo-400 hover:to-violet-400"
+        className="mt-5 inline-flex w-full items-center justify-center rounded-lg bg-brand-800 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700 dark:bg-brand-200 dark:text-brand-950 dark:hover:bg-brand-100"
       >
         Sign in to upload
       </Link>

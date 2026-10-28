@@ -89,7 +89,7 @@ export function ForumActions({
       <button
         type="button"
         onClick={() => setEditing(true)}
-        className="rounded-lg px-2.5 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-100 dark:text-indigo-300 dark:hover:bg-indigo-500/10 dark:hover:text-indigo-200"
+        className="rounded-lg px-2.5 py-1 text-xs font-medium text-brand-600 hover:bg-brand-100 dark:text-brand-300 dark:hover:bg-brand-500/10 dark:hover:text-brand-200"
       >
         Edit
       </button>

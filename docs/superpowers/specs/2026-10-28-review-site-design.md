@@ -44,7 +44,6 @@ type ReviewSubject = {
   slug: "economics" | "physics" | "cs" | "math";
   name: Localized;
   tagline: Localized;
-  accent: "amber" | "indigo" | "emerald" | "rose";
   courses: Course[];     // 非数学科目只有一个 course
   uploadHref: string;    // 旧的上传区，例如 "/ib/section-5/physics"
 };
@@ -68,7 +67,7 @@ type ReviewSubject = {
 
 ### 页面
 
-- **首页 `/`**：标题区；四张大科目卡片（主题色、图标、Topic 数、完成度进度条）；底部是登录状态卡片。
+- **首页 `/`**：标题区；四张科目卡片（缩写图标、课程、完成度进度条）；底部是登录状态卡片。
 - **分区页 `/subjects/[subject]`**：标题区（科目名、简介、完成度）；数学有 AA HL/AA SL 切换（通过 `?course=` 查询参数，服务端渲染）；按 Group 分块显示 Topic 卡片网格。ready 卡片可点击并打开笔记，soon 卡片置灰并标“即将上线”；物理额外显示“综合复习”入口；页面底部链接到旧的上传区和论坛。未知 slug 返回 `notFound()`。
 - 现有的 `SiteHeader` 导航改成：首页、四个科目、登录/登出。
 
@@ -81,8 +80,9 @@ type ReviewSubject = {
 ## 视觉
 
 - 沿用 Tailwind v4 和 `next-themes` 深浅色模式。
-- 科目主题色：经济用 amber，物理用 indigo，CS 用 emerald，数学用 rose。
-- 卡片比现有的 `NavCard` 更大，hover 时有轻微上浮和主题色描边。
+- 全站只用一个强调色：深蓝（`globals.css` 中的 `brand-50` … `brand-950`）。红色只用于错误和删除。
+- 不用渐变、光晕、彩色阴影、悬停上浮；背景为纯色，卡片是白底细边框，悬停时只改变边框颜色。
+- 物理静态笔记保持自己的配色，不在此范围内。
 
 ## 错误处理
 

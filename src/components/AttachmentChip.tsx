@@ -18,7 +18,7 @@ export function AttachmentChip({ attachment, noteIndex, program }: Props) {
     return (
       <div className="flex flex-col gap-1.5">
         <div className="inline-flex max-w-full items-center gap-2 self-start rounded-full border border-slate-300 bg-slate-100/80 px-3 py-1.5 text-xs font-medium text-slate-800 dark:border-white/10 dark:bg-white/5 dark:text-slate-200">
-          <Badge label={isImage ? "Image" : "File"} tone={isImage ? "teal" : "amber"} />
+          <Badge label={isImage ? "Image" : "File"} />
           <a
             href={`/api/forum/uploads/${attachment.uploadId}`}
             target="_blank"
@@ -34,7 +34,7 @@ export function AttachmentChip({ attachment, noteIndex, program }: Props) {
           )}
           <a
             href={`/api/forum/uploads/${attachment.uploadId}?download=1`}
-            className="ml-1 text-[11px] text-teal-700 hover:text-teal-600 dark:text-teal-300 dark:hover:text-teal-200"
+            className="ml-1 text-[11px] text-brand-700 hover:text-brand-600 dark:text-brand-300 dark:hover:text-brand-200"
             title="Download"
           >
             ↓
@@ -57,7 +57,7 @@ export function AttachmentChip({ attachment, noteIndex, program }: Props) {
   if (!note) {
     return (
       <span className="inline-flex items-center gap-2 rounded-full border border-dashed border-slate-300 bg-slate-100/80 px-3 py-1.5 text-xs font-medium text-slate-500 dark:border-white/10 dark:bg-white/5 dark:text-slate-400">
-        <Badge label="Note" tone="indigo" />
+        <Badge label="Note" />
         <span>(unavailable)</span>
       </span>
     );
@@ -66,33 +66,20 @@ export function AttachmentChip({ attachment, noteIndex, program }: Props) {
   return (
     <Link
       href={href}
-      className="inline-flex max-w-full items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-800 transition hover:border-indigo-300 hover:bg-indigo-100 dark:border-indigo-500/30 dark:bg-indigo-500/10 dark:text-indigo-200 dark:hover:border-indigo-400/50 dark:hover:bg-indigo-500/20"
+      className="inline-flex max-w-full items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-xs font-medium text-brand-800 transition hover:border-brand-300 hover:bg-brand-100 dark:border-brand-500/30 dark:bg-brand-500/10 dark:text-brand-200 dark:hover:border-brand-400/50 dark:hover:bg-brand-500/20"
     >
-      <Badge label="Note" tone="indigo" />
+      <Badge label="Note" />
       <span className="truncate">{note.title}</span>
-      <span className="text-[10px] uppercase tracking-wide text-indigo-600/70 dark:text-indigo-300/70">
+      <span className="text-[10px] uppercase tracking-wide text-brand-600/70 dark:text-brand-300/70">
         {note.section} · {note.subject}
       </span>
     </Link>
   );
 }
 
-function Badge({
-  label,
-  tone,
-}: {
-  label: string;
-  tone: "indigo" | "amber" | "teal";
-}) {
-  const tones: Record<string, string> = {
-    indigo: "bg-indigo-200 text-indigo-900 dark:bg-indigo-500/30 dark:text-indigo-100",
-    amber: "bg-amber-200 text-amber-900 dark:bg-amber-500/30 dark:text-amber-100",
-    teal: "bg-teal-200 text-teal-900 dark:bg-teal-500/30 dark:text-teal-100",
-  };
+function Badge({ label }: { label: string }) {
   return (
-    <span
-      className={`rounded-full px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide ${tones[tone]}`}
-    >
+    <span className="rounded-full bg-brand-200 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-brand-900 dark:bg-brand-500/30 dark:text-brand-100">
       {label}
     </span>
   );

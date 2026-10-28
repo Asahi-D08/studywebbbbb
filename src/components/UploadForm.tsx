@@ -75,7 +75,7 @@ export function UploadForm({ program, section, subject }: Props) {
   const busy = submitting || pending;
 
   const inputCls =
-    "w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/25 dark:border-white/10 dark:bg-slate-950/60 dark:text-white dark:placeholder:text-slate-500 dark:focus:border-indigo-400 dark:focus:ring-indigo-500/30";
+    "w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/25 dark:border-white/10 dark:bg-slate-950/60 dark:text-white dark:placeholder:text-slate-500 dark:focus:border-brand-400 dark:focus:ring-brand-500/30";
 
   return (
     <form
@@ -90,7 +90,7 @@ export function UploadForm({ program, section, subject }: Props) {
             onClick={() => setMode("text")}
             className={`rounded-full px-3 py-1.5 transition ${
               mode === "text"
-                ? "bg-indigo-500 text-white shadow-sm"
+                ? "bg-brand-500 text-white shadow-sm"
                 : "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
             }`}
           >
@@ -101,7 +101,7 @@ export function UploadForm({ program, section, subject }: Props) {
             onClick={() => setMode("file")}
             className={`rounded-full px-3 py-1.5 transition ${
               mode === "file"
-                ? "bg-indigo-500 text-white shadow-sm"
+                ? "bg-brand-500 text-white shadow-sm"
                 : "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
             }`}
           >
@@ -161,7 +161,7 @@ export function UploadForm({ program, section, subject }: Props) {
         <button
           type="submit"
           disabled={busy}
-          className="rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:from-indigo-400 hover:to-violet-400 disabled:opacity-50"
+          className="rounded-lg bg-brand-800 px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-700 dark:bg-brand-200 dark:text-brand-950 dark:hover:bg-brand-100 disabled:opacity-50"
         >
           {busy ? "Uploading…" : "Save note"}
         </button>
@@ -188,7 +188,7 @@ function SharingToggle({
       <span
         aria-hidden
         className={`mt-0.5 inline-flex h-5 w-9 shrink-0 items-center rounded-full px-0.5 transition ${
-          shared ? "bg-emerald-500" : "bg-slate-400 dark:bg-slate-700"
+          shared ? "bg-brand-500" : "bg-slate-400 dark:bg-slate-700"
         }`}
       >
         <span
@@ -232,7 +232,7 @@ function FileDrop({
       }}
       className={`flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed px-4 py-10 text-center transition ${
         drag
-          ? "border-indigo-500 bg-indigo-50 dark:border-indigo-400 dark:bg-indigo-500/10"
+          ? "border-brand-500 bg-brand-50 dark:border-brand-400 dark:bg-brand-500/10"
           : "border-slate-300 bg-slate-50/80 hover:border-slate-400 dark:border-white/15 dark:bg-slate-950/40 dark:hover:border-white/30 dark:hover:bg-slate-950/60"
       }`}
     >
@@ -253,7 +253,7 @@ function FileDrop({
               e.preventDefault();
               onFile(null);
             }}
-            className="mt-2 text-xs text-indigo-600 hover:text-indigo-500 dark:text-indigo-300 dark:hover:text-indigo-200"
+            className="mt-2 text-xs text-brand-600 hover:text-brand-500 dark:text-brand-300 dark:hover:text-brand-200"
           >
             Choose another file
           </button>

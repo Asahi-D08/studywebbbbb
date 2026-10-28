@@ -35,7 +35,7 @@ export function ForumPostList({ posts, program, section }: Props) {
       {posts.map((p) => (
         <li
           key={p.id}
-          className="rounded-2xl border border-slate-200/90 bg-white/60 transition hover:border-indigo-200 dark:border-white/10 dark:bg-slate-900/40 dark:hover:border-white/20"
+          className="rounded-2xl border border-slate-200/90 bg-white/60 transition hover:border-brand-200 dark:border-white/10 dark:bg-slate-900/40 dark:hover:border-white/20"
         >
           <Link
             href={`/${program}/${section}/forum/${p.id}`}

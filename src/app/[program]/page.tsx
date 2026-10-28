@@ -3,8 +3,6 @@ import { getProgram } from "@/lib/curriculum";
 import { NavCard } from "@/components/Card";
 import { SiteHeader } from "@/components/SiteHeader";
 
-const accents = ["indigo", "violet", "fuchsia", "teal", "amber", "rose"] as const;
-
 export default async function ProgramPage({
   params,
 }: {
@@ -48,16 +46,14 @@ export default async function ProgramPage({
           />
         ) : (
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {program.sections.map((s, i) => (
+            {program.sections.map((s) => (
               <NavCard
                 key={s.slug}
                 href={`/${program.slug}/${s.slug}`}
                 eyebrow={`Section ${s.number ?? ""}`.trim()}
                 title={s.title.replace(/^Section \d+ — /, "")}
                 description={s.tagline}
-                badge={`${s.subjects.length} subjects`}
-                accent={accents[i % accents.length]}
-              />
+                badge={`${s.subjects.length} subjects`}              />
             ))}
           </div>
         )}
@@ -77,15 +73,13 @@ function SubjectsGrid({
 }) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      {subjects.map((s, i) => (
+      {subjects.map((s) => (
         <NavCard
           key={s.slug}
           href={`/${program}/${section}/${s.slug}`}
           eyebrow="Subject"
           title={s.name}
-          description={s.caption}
-          accent={accents[i % accents.length]}
-        />
+          description={s.caption}        />
       ))}
     </div>
   );

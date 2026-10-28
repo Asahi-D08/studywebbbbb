@@ -24,17 +24,17 @@ export async function SiteHeader({
     : "/login";
 
   return (
-    <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/75 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/70">
+    <header className="sticky top-0 z-30 border-b border-slate-200 bg-background dark:border-white/10">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
         <Link href="/" className="group flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-indigo-400 via-violet-400 to-fuchsia-400 text-sm font-bold text-slate-950 shadow-lg shadow-indigo-500/30 transition-transform group-hover:scale-105">
+          <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand-800 text-sm font-bold text-white dark:bg-brand-200 dark:text-brand-950">
             SW
           </span>
           <div className="leading-tight">
             <div className="text-sm font-semibold tracking-wide text-slate-900 dark:text-white">
               StudyWeb
             </div>
-            <div className="text-[11px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+            <div className="text-xs text-slate-500 dark:text-slate-400">
               {t("brand.sub", lang)}
             </div>
           </div>

@@ -139,7 +139,7 @@ export function ForumComposer({
   }
 
   const inputCls =
-    "w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/25 dark:border-white/10 dark:bg-slate-950/60 dark:text-white dark:placeholder:text-slate-500 dark:focus:border-indigo-400";
+    "w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/25 dark:border-white/10 dark:bg-slate-950/60 dark:text-white dark:placeholder:text-slate-500 dark:focus:border-brand-400";
 
   return (
     <form
@@ -179,25 +179,19 @@ export function ForumComposer({
             {noteRefs.map((r) => (
               <Chip
                 key={`note-${r.id}`}
-                label={`Note · ${r.label}`}
-                tone="indigo"
-                onRemove={() => removeNoteRef(r.id)}
+                label={`Note · ${r.label}`}                onRemove={() => removeNoteRef(r.id)}
               />
             ))}
             {keptUploads.map((u) => (
               <Chip
                 key={`up-${u.uploadId}`}
-                label={`File · ${u.originalName}`}
-                tone="amber"
-                onRemove={() => removeKeptUpload(u.uploadId)}
+                label={`File · ${u.originalName}`}                onRemove={() => removeKeptUpload(u.uploadId)}
               />
             ))}
             {files.map((f, i) => (
               <Chip
                 key={`new-${i}-${f.name}`}
-                label={`New · ${f.name} (${(f.size / 1024).toFixed(1)} KB)`}
-                tone="teal"
-                onRemove={() => removeFile(i)}
+                label={`New · ${f.name} (${(f.size / 1024).toFixed(1)} KB)`}                onRemove={() => removeFile(i)}
               />
             ))}
           </div>
@@ -222,7 +216,7 @@ export function ForumComposer({
           <button
             type="button"
             onClick={() => setPicker(true)}
-            className="rounded-lg border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-800 hover:border-indigo-300 hover:bg-indigo-100 dark:border-indigo-500/30 dark:bg-indigo-500/10 dark:text-indigo-200 dark:hover:border-indigo-400/50 dark:hover:bg-indigo-500/20"
+            className="rounded-lg border border-brand-200 bg-brand-50 px-3 py-1.5 text-xs font-medium text-brand-800 hover:border-brand-300 hover:bg-brand-100 dark:border-brand-500/30 dark:bg-brand-500/10 dark:text-brand-200 dark:hover:border-brand-400/50 dark:hover:bg-brand-500/20"
           >
             Attach shared note
           </button>
@@ -249,7 +243,7 @@ export function ForumComposer({
         <button
           type="submit"
           disabled={submitting}
-          className="rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:from-indigo-400 hover:to-violet-400 disabled:opacity-50"
+          className="rounded-lg bg-brand-800 px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-700 dark:bg-brand-200 dark:text-brand-950 dark:hover:bg-brand-100 disabled:opacity-50"
         >
           {submitting ? "Saving…" : labelFor(mode)}
         </button>
@@ -290,27 +284,9 @@ function labelFor(mode: Mode): string {
   }
 }
 
-function Chip({
-  label,
-  tone,
-  onRemove,
-}: {
-  label: string;
-  tone: "indigo" | "amber" | "teal";
-  onRemove: () => void;
-}) {
-  const tones: Record<string, string> = {
-    indigo:
-      "border-indigo-200 bg-indigo-50 text-indigo-800 dark:border-indigo-500/30 dark:bg-indigo-500/10 dark:text-indigo-200",
-    amber:
-      "border-amber-200 bg-amber-50 text-amber-900 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200",
-    teal:
-      "border-teal-200 bg-teal-50 text-teal-900 dark:border-teal-500/30 dark:bg-teal-500/10 dark:text-teal-200",
-  };
+function Chip({ label, onRemove }: { label: string; onRemove: () => void }) {
   return (
-    <span
-      className={`inline-flex max-w-full items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium ${tones[tone]}`}
-    >
+    <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-medium text-brand-800 dark:border-brand-500/30 dark:bg-brand-500/10 dark:text-brand-200">
       <span className="truncate">{label}</span>
       <button
         type="button"
@@ -472,7 +448,7 @@ function NotePickerModal({
             type="button"
             onClick={commit}
             disabled={selected.size === 0}
-            className="rounded-lg bg-indigo-500 px-3 py-1.5 text-sm font-semibold text-white shadow hover:bg-indigo-400 disabled:opacity-50"
+            className="rounded-lg bg-brand-800 px-3 py-1.5 text-sm font-semibold text-white hover:bg-brand-700 dark:bg-brand-200 dark:text-brand-950 dark:hover:bg-brand-100 disabled:opacity-50"
           >
             Attach {selected.size > 0 ? `(${selected.size})` : ""}
           </button>
