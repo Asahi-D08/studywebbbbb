@@ -10,6 +10,12 @@ upload area with a public **Sharing area** and a **Private** tab.
 - `/subjects/[subject]` — syllabus topics for `economics`, `physics`, `cs`, `math`
   (`?course=aa-hl|aa-sl` for maths). Outlines live in `src/lib/subjects.ts`;
   set a topic's `status: "ready"` and `href` once its notes exist.
+- `/subjects/[subject]/[topic]` — bilingual topic notes (all 31 IB Economics
+  topics). Content lives in `src/content/<subject>/<slug>.tsx` (registered in
+  `src/content/<subject>/index.ts`), built from `src/components/notes/`
+  (`blocks.tsx` for definitions/callouts/HL boxes, `Chart.tsx` for SVG
+  diagrams). Sections with `level: "hl"` and `<HL>` blocks are hidden by
+  `?level=sl`.
 - `public/notes/physics/` — static IB Physics HL notes (copied from the
   standalone notes; `i18n.js` adds the “← StudyWeb” link to their top bar)
 - `/[program]` — legacy programme overview (IGCSE / IB upload areas)

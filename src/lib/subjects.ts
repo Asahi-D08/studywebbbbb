@@ -12,7 +12,10 @@ export type Topic = {
   status: "ready" | "soon";
   /** Required when status is "ready". */
   href?: string;
+  /** The whole topic is HL only. */
   hlOnly?: boolean;
+  /** SL/HL topic that contains HL-only sub-topics, diagrams or calculations. */
+  hasHL?: boolean;
 };
 
 export type Group = { code: string; title: Localized; topics: Topic[] };
@@ -43,6 +46,22 @@ function note(code: string, zh: string, en: string, file: string, hlOnly = false
   return { code, name: { zh, en }, status: "ready", href: `${PHYSICS_NOTES}/${file}`, hlOnly };
 }
 
+export function topicSlug(code: string): string {
+  return code.replace(/\./g, "-");
+}
+
+/** "hl": whole topic is HL only; "part": includes HL-only sub-topics or calculations. */
+function econ(code: string, zh: string, en: string, hl?: "hl" | "part"): Topic {
+  return {
+    code,
+    name: { zh, en },
+    status: "ready",
+    href: `/subjects/economics/${topicSlug(code)}`,
+    hlOnly: hl === "hl",
+    hasHL: hl === "part",
+  };
+}
+
 const economics: ReviewSubject = {
   slug: "economics",
   name: { zh: "IB 经济", en: "IB Economics" },
@@ -62,55 +81,55 @@ const economics: ReviewSubject = {
           code: "Unit 1",
           title: { zh: "经济学导论", en: "Introduction to economics" },
           topics: [
-            soon("1.1", "什么是经济学", "What is economics?"),
-            soon("1.2", "经济学家如何看待世界", "How do economists approach the world?"),
+            econ("1.1", "什么是经济学", "What is economics?"),
+            econ("1.2", "经济学家如何看待世界", "How do economists approach the world?"),
           ],
         },
         {
           code: "Unit 2",
           title: { zh: "微观经济学", en: "Microeconomics" },
           topics: [
-            soon("2.1", "需求", "Demand"),
-            soon("2.2", "供给", "Supply"),
-            soon("2.3", "竞争市场均衡", "Competitive market equilibrium"),
-            soon("2.4", "对消费者与生产者最大化行为的批判", "Critique of the maximising behaviour of consumers and producers"),
-            soon("2.5", "需求弹性", "Elasticity of demand"),
-            soon("2.6", "供给弹性", "Elasticity of supply"),
-            soon("2.7", "政府在微观经济中的作用", "Role of government in microeconomics"),
-            soon("2.8", "市场失灵：外部性与公共资源", "Market failure: externalities and common pool resources"),
-            soon("2.9", "市场失灵：公共物品", "Market failure: public goods"),
-            soon("2.10", "市场失灵：信息不对称", "Market failure: asymmetric information"),
-            soon("2.11", "市场失灵：市场势力", "Market failure: market power"),
-            soon("2.12", "市场无法实现公平", "The market's inability to achieve equity"),
+            econ("2.1", "需求", "Demand", "part"),
+            econ("2.2", "供给", "Supply", "part"),
+            econ("2.3", "竞争市场均衡", "Competitive market equilibrium", "part"),
+            econ("2.4", "对消费者与生产者最大化行为的批判", "Critique of the maximising behaviour of consumers and producers", "hl"),
+            econ("2.5", "需求弹性", "Elasticity of demand", "part"),
+            econ("2.6", "供给弹性", "Elasticity of supply", "part"),
+            econ("2.7", "政府在微观经济中的作用", "Role of government in microeconomics", "part"),
+            econ("2.8", "市场失灵：外部性与公共资源", "Market failure: externalities and common pool resources", "part"),
+            econ("2.9", "市场失灵：公共物品", "Market failure: public goods"),
+            econ("2.10", "市场失灵：信息不对称", "Market failure: asymmetric information", "hl"),
+            econ("2.11", "市场失灵：市场势力", "Market failure: market power", "hl"),
+            econ("2.12", "市场无法实现公平", "The market's inability to achieve equity", "hl"),
           ],
         },
         {
           code: "Unit 3",
           title: { zh: "宏观经济学", en: "Macroeconomics" },
           topics: [
-            soon("3.1", "衡量经济活动", "Measuring economic activity"),
-            soon("3.2", "总需求与总供给", "Aggregate demand and aggregate supply"),
-            soon("3.3", "宏观经济目标", "Macroeconomic objectives"),
-            soon("3.4", "不平等与贫困", "Economics of inequality and poverty"),
-            soon("3.5", "需求管理：货币政策", "Demand management: monetary policy"),
-            soon("3.6", "需求管理：财政政策", "Demand management: fiscal policy"),
-            soon("3.7", "供给侧政策", "Supply-side policies"),
+            econ("3.1", "衡量经济活动", "Measuring economic activity"),
+            econ("3.2", "总需求与总供给", "Aggregate demand and aggregate supply"),
+            econ("3.3", "宏观经济目标", "Macroeconomic objectives", "part"),
+            econ("3.4", "不平等与贫困", "Economics of inequality and poverty", "part"),
+            econ("3.5", "需求管理：货币政策", "Demand management: monetary policy", "part"),
+            econ("3.6", "需求管理：财政政策", "Demand management: fiscal policy", "part"),
+            econ("3.7", "供给侧政策", "Supply-side policies"),
           ],
         },
         {
           code: "Unit 4",
           title: { zh: "全球经济", en: "The global economy" },
           topics: [
-            soon("4.1", "国际贸易的好处", "Benefits of international trade"),
-            soon("4.2", "贸易保护的类型", "Types of trade protection"),
-            soon("4.3", "支持与反对贸易保护", "Arguments for and against trade protection"),
-            soon("4.4", "经济一体化", "Economic integration"),
-            soon("4.5", "汇率", "Exchange rates"),
-            soon("4.6", "国际收支", "Balance of payments"),
-            soon("4.7", "可持续发展", "Sustainable development"),
-            soon("4.8", "衡量发展", "Measuring development"),
-            soon("4.9", "经济增长与发展的障碍", "Barriers to economic growth and development"),
-            soon("4.10", "经济增长与发展的策略", "Strategies for economic growth and development"),
+            econ("4.1", "国际贸易的好处", "Benefits of international trade", "part"),
+            econ("4.2", "贸易保护的类型", "Types of trade protection", "part"),
+            econ("4.3", "支持与反对贸易保护", "Arguments for and against trade protection"),
+            econ("4.4", "经济一体化", "Economic integration", "part"),
+            econ("4.5", "汇率", "Exchange rates", "part"),
+            econ("4.6", "国际收支", "Balance of payments", "part"),
+            econ("4.7", "可持续发展", "Sustainable development", "part"),
+            econ("4.8", "衡量发展", "Measuring development"),
+            econ("4.9", "经济增长与发展的障碍", "Barriers to economic growth and development"),
+            econ("4.10", "经济增长与发展的策略", "Strategies for economic growth and development"),
           ],
         },
       ],

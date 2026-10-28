@@ -1,5 +1,9 @@
+import Link from "next/link";
 import { pick, t, type Lang } from "@/lib/i18n";
 import type { Topic } from "@/lib/subjects";
+
+const CARD =
+  "block rounded-xl border border-slate-200 bg-white p-4 transition hover:border-brand-300 hover:bg-brand-50/40 dark:border-white/10 dark:bg-slate-900/60 dark:hover:border-brand-400/50";
 
 export function TopicCard({ topic, lang }: { topic: Topic; lang: Lang }) {
   const ready = topic.status === "ready" && topic.href;
@@ -10,14 +14,19 @@ export function TopicCard({ topic, lang }: { topic: Topic; lang: Lang }) {
         <span className="font-mono text-xs font-semibold text-brand-700 dark:text-brand-300">
           {topic.code}
         </span>
-        <span className="flex items-center gap-1.5 text-[10px] font-medium">
+        <span className="flex items-center gap-1.5 text-[10px] font-semibold">
           {topic.hlOnly && (
-            <span className="rounded border border-brand-200 px-1.5 py-px text-brand-700 dark:border-brand-400/40 dark:text-brand-300">
-              HL
+            <span className="rounded bg-brand-800 px-1.5 py-px text-white dark:bg-brand-200 dark:text-brand-950">
+              HL only
+            </span>
+          )}
+          {topic.hasHL && (
+            <span className="rounded border border-brand-300 px-1.5 py-px text-brand-700 dark:border-brand-400/50 dark:text-brand-300">
+              {t("notes.hasHL", lang)}
             </span>
           )}
           {!ready && (
-            <span className="text-slate-400 dark:text-slate-500">{t("subject.soon", lang)}</span>
+            <span className="font-medium text-slate-400 dark:text-slate-500">{t("subject.soon", lang)}</span>
           )}
         </span>
       </div>
@@ -32,12 +41,17 @@ export function TopicCard({ topic, lang }: { topic: Topic; lang: Lang }) {
     </>
   );
 
+  if (ready && topic.href?.startsWith("/subjects/")) {
+    return (
+      <Link href={topic.href} className={CARD}>
+        {body}
+      </Link>
+    );
+  }
+
   if (ready) {
     return (
-      <a
-        href={topic.href}
-        className="block rounded-xl border border-slate-200 bg-white p-4 transition hover:border-brand-300 hover:bg-brand-50/40 dark:border-white/10 dark:bg-slate-900/60 dark:hover:border-brand-400/50"
-      >
+      <a href={topic.href} className={CARD}>
         {body}
       </a>
     );

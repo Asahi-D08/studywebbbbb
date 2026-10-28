@@ -8,6 +8,7 @@ import {
   courseTopics,
   getCourse,
   getSubject,
+  topicSlug,
 } from "../src/lib/subjects.ts";
 
 test("four subjects in display order", () => {
@@ -22,22 +23,41 @@ test("physics: 25 topics, all ready", () => {
   assert.deepEqual(courseProgress(physics.courses[0]), { ready: 25, total: 25 });
 });
 
-test("economics, cs and math are all coming soon", () => {
-  for (const slug of ["economics", "cs", "math"]) {
+test("economics: all 31 topics ready, each backed by a notes file", () => {
+  const course = getSubject("economics")!.courses[0];
+  assert.deepEqual(courseProgress(course), { ready: 31, total: 31 });
+  for (const tp of courseTopics(course)) {
+    assert.equal(tp.href, `/subjects/economics/${topicSlug(tp.code)}`);
+    const file = path.join("src/content/economics", `${topicSlug(tp.code)}.tsx`);
+    assert.ok(existsSync(file), `missing ${file}`);
+  }
+});
+
+test("economics: HL-only topics match the IB guide", () => {
+  const topics = courseTopics(getSubject("economics")!.courses[0]);
+  assert.deepEqual(
+    topics.filter((tp) => tp.hlOnly).map((tp) => tp.code),
+    ["2.4", "2.10", "2.11", "2.12"],
+  );
+  assert.ok(topics.every((tp) => !(tp.hlOnly && tp.hasHL)));
+});
+
+test("cs and math are all coming soon", () => {
+  for (const slug of ["cs", "math"]) {
     for (const course of getSubject(slug)!.courses) {
       assert.equal(courseProgress(course).ready, 0, `${slug}/${course.slug}`);
     }
   }
 });
 
-test("every ready topic and extra links to a file in public/", () => {
+test("every static-note topic and extra links to a file in public/", () => {
   const hrefs: string[] = [];
   for (const s of SUBJECTS) {
     for (const c of s.courses) {
       for (const tp of courseTopics(c)) {
         if (tp.status === "ready") {
           assert.ok(tp.href, `${s.slug} ${tp.code} missing href`);
-          hrefs.push(tp.href);
+          if (!tp.href.startsWith("/subjects/")) hrefs.push(tp.href);
         }
       }
     }

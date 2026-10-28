@@ -47,6 +47,22 @@ const UI = {
     en: "Upload your own notes, files or images, or ask in the discussion board.",
   },
   "subject.open": { zh: "进入", en: "Open" },
+  "notes.hasHL": { zh: "含 HL", en: "Incl. HL" },
+  "notes.slOnly": { zh: "只看 SL 内容", en: "SL content only" },
+  "notes.showAll": { zh: "显示全部（含 HL）", en: "Show all (incl. HL)" },
+  "notes.hlOnlyTopic": {
+    zh: "整个 Topic 仅 HL 学习，SL 学生可以跳过。",
+    en: "This whole topic is HL only; SL students can skip it.",
+  },
+  "notes.hasHLTopic": {
+    zh: "本 Topic 中带黑框和「HL only」标签的内容只考 HL。",
+    en: "Boxed content marked “HL only” is examined at HL only.",
+  },
+  "notes.contents": { zh: "本节目录", en: "Contents" },
+  "notes.prev": { zh: "上一节", en: "Previous" },
+  "notes.next": { zh: "下一节", en: "Next" },
+  "notes.sources": { zh: "参考资料", en: "Sources" },
+  "notes.empty": { zh: "这一节的笔记还在整理中。", en: "Notes for this topic are being written." },
 } satisfies Record<string, Localized>;
 
 export type UIKey = keyof typeof UI;
