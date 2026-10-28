@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.4 Thermodynamics (HL) · IB Physics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>B.4 Thermodynamics <span class="badge badge-hl">HL only</span></h1>
+  <p>第一定律 · 功 · 熵与第二定律 · 典型过程 · 热机 · Carnot</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>如何分析系统内的能量转移与储存？如何判断系统未来演化？熵如何约束宇宙演化？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>系统类型与符号约定</h2>
+  <table>
+    <tr><th>系统</th><th>含义</th></tr>
+    <tr><td>封闭 closed</td><td>无质量进出，可有热量/功交换</td></tr>
+    <tr><td>孤立 isolated</td><td>质量与能量皆不可交换</td></tr>
+  </table>
+  <div class="note"><strong>Clausius 符号约定（IB）：</strong>$Q$ = 供给系统的净热；$W$ = 系统对外做的净功。系统做功为正；外界对系统做功为负。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>热力学第一定律</h2>
+  <div class="def">封闭系统能量守恒：$Q=\Delta U+W$。</div>
+  <div class="formula">$$Q=\Delta U+W$$</div>
+  <h3>体积功</h3>
+  <div class="formula">$$W=P\Delta V$$</div>
+  <p>（边界改变时；压强可变时需用面积或积分思想，定量题限单原子理想气体。）</p>
+  <h3>内能变化（单原子理想气体）</h3>
+  <div class="formula">$$\Delta U=\tfrac32 Nk_B\Delta T=\tfrac32 nR\Delta T$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>熵 Entropy</h2>
+  <div class="def">熵 $S$ 与系统粒子无序程度相关。</div>
+  <div class="formula">$$\Delta S=\frac{\Delta Q}{T}\qquad S=k_B\ln\Omega$$</div>
+  <p>$\Omega$：微观状态数（等概率；可用简单组合模型理解，如硬币）。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>热力学第二定律</h2>
+  <ul>
+    <li>孤立系统熵变约束可能过程与整体演化</li>
+    <li>真实孤立系统过程几乎都<strong>不可逆</strong> → 熵<strong>总是增加</strong></li>
+    <li>非孤立系统局部熵可减少，但环境熵增加不少于该减少</li>
+    <li>表述形式：Clausius 表述、Kelvin 表述，以及用熵变描述</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>典型过程（固定一个量）</h2>
+  <table>
+    <tr><th>过程</th><th>固定量</th><th>要点</th></tr>
+    <tr><td>等容 isovolumetric</td><td>$V$</td><td>$W=0$，$\ Q=\Delta U$</td></tr>
+    <tr><td>等压 isobaric</td><td>$P$</td><td>$W=P\Delta V$</td></tr>
+    <tr><td>等温 isothermal</td><td>$T$</td><td>理想气体 $\Delta U=0$，$Q=W$</td></tr>
+    <tr><td>绝热 adiabatic</td><td>$Q=0$</td><td>$\Delta U=-W$</td></tr>
+  </table>
+  <h3>单原子理想气体绝热</h3>
+  <div class="formula">$$PV^{5/3}=\text{constant}$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>热机与 Carnot 效率</h2>
+  <p>循环气体过程驱动热机；效率：</p>
+  <div class="formula">$$\eta=\frac{\text{useful work}}{\text{input energy}}$$</div>
+  <div class="def">Carnot 循环给出给定高温库 $T_h$、低温库 $T_c$ 下的效率上限：</div>
+  <div class="formula">$$\eta_{\text{Carnot}}=1-\frac{T_c}{T_h}$$</div>
+  <div class="note">温度必须用开尔文。任何实际热机效率 $\le$ Carnot 效率。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">7</span>Exam tips</h2>
+  <ul>
+    <li>先定符号约定，再代入第一定律</li>
+    <li>$P$–$V$ 图：曲线下面积 ↔ 功</li>
+    <li>熵增判据：孤立系统 $\Delta S\ge 0$</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="b3-gas-laws.html"><span>上一章</span>← B.3</a>
+  <a href="../electricity.html"><span>下一章</span>B.5 Current &amp; circuits →</a>
+</div>
+<footer>B.4 · HL only · ~8 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

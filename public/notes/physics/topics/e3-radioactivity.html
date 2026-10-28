@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E.3 Radioactive decay · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>E.3 Radioactive decay</h1>
+  <p>同位素 · 结合能 · 衰变类型 · 半衰期 · 指数衰变（HL）</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>为何有的同位素更稳定？核如何变化？随机衰变如何仍能预测？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>同位素、结合能与质量亏损</h2>
+  <ul>
+    <li><strong>同位素：</strong>同 $Z$、不同 $A$（中子数不同）</li>
+    <li><strong>质量亏损：</strong>核质量小于独立核子质量和</li>
+    <li><strong>结合能：</strong>对应质量亏损的能量；$E=mc^2$</li>
+  </ul>
+  <p>结合能/核子随 $A$ 变化：铁附近最高；约 $A>60$ 后曲线大致平坦。质量单位可用 kg、$\mathrm{MeV}\,c^{-2}$、$u$。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>强核力</h2>
+  <div class="def">核子之间存在短程、吸引的<strong>强核力</strong>。稳定性与中子/质子比有关；强核力存在有实验证据。</div>
+  <p>（本课程不讨论弱核力。）</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>放射性衰变：随机且自发</h2>
+  <table>
+    <tr><th>类型</th><th>核变化要点</th><th>穿透 / 电离</th></tr>
+    <tr><td>α</td><td>$A\!\downarrow\!4$，$Z\!\downarrow\!2$</td><td>穿透弱，电离强</td></tr>
+    <tr><td>β⁻</td><td>$n\to p+e^-+\bar\nu$，$Z\!\uparrow\!1$</td><td>中等</td></tr>
+    <tr><td>β⁺</td><td>$p\to n+e^++\nu$，$Z\!\downarrow\!1$</td><td>中等</td></tr>
+    <tr><td>γ</td><td>$A,Z$ 不变，能级跃迁放光子</td><td>穿透强，电离弱</td></tr>
+  </table>
+  <ul>
+    <li>α、γ 光谱 → 核能级分立证据</li>
+    <li>β 连续能谱 → 中微子/反中微子存在证据</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>活度、计数率与半衰期</h2>
+  <ul>
+    <li><strong>半衰期 $T_{1/2}$：</strong>核数（或活度）减半所需时间</li>
+    <li>SL：用<strong>整数个</strong>半衰期跟踪活度/计数率变化</li>
+    <li>须扣除本底辐射对计数率的影响</li>
+  </ul>
+  <p>应用情境：医用同位素选择、管道测漏、测厚、放射性测年（结合穿透性与半衰期）。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>指数衰变律 <span class="badge badge-hl">HL</span></h2>
+  <div class="formula">
+    $$N=N_0 e^{-\lambda t}$$
+    $$A=\lambda N=\lambda N_0 e^{-\lambda t}$$
+    $$T_{1/2}=\frac{\ln 2}{\lambda}$$
+  </div>
+  <p>$\lambda$：衰变常量；在 $\lambda t$ 足够小时可近似为单位时间内衰变概率。HL 需能对任意时间间隔应用指数公式，并会求半衰期。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>Exam tips</h2>
+  <ul>
+    <li>写衰变方程：先配平 $A$ 与 $Z$</li>
+    <li>结合能释放：产物总结合能更高（或质量更低）</li>
+    <li>HL：$A=\lambda N$，半衰期与 $\lambda$ 反比</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="e2-quantum.html"><span>上一章</span>← E.2</a>
+  <a href="e4-fission.html"><span>下一章</span>E.4 Fission →</a>
+</div>
+<footer>E.3 · SL 7 h · HL +5 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

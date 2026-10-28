@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="320" viewBox="0 0 720 320" font-family="Arial, sans-serif">
+  <rect width="720" height="320" fill="#ffffff"/>
+
+  <!-- ============ Panel 1: Ohmic conductor ============ -->
+  <g transform="translate(20,20)">
+    <text x="100" y="14" text-anchor="middle" font-size="14" font-weight="bold">Ohmic conductor</text>
+    <line x1="30" y1="250" x2="200" y2="250" stroke="#333" stroke-width="2"/>
+    <line x1="30" y1="250" x2="30" y2="40" stroke="#333" stroke-width="2"/>
+    <polygon points="200,250 192,246 192,254" fill="#333"/>
+    <polygon points="30,40 26,48 34,48" fill="#333"/>
+    <text x="205" y="254" font-size="12">V</text>
+    <text x="20" y="38" font-size="12">I</text>
+    <line x1="30" y1="250" x2="190" y2="60" stroke="#1f77b4" stroke-width="2.5"/>
+    <text x="120" y="120" font-size="11" fill="#1f77b4">I is proportional to V</text>
+    <text x="120" y="135" font-size="11" fill="#1f77b4">(R constant)</text>
+  </g>
+
+  <!-- ============ Panel 2: Filament lamp ============ -->
+  <g transform="translate(260,20)">
+    <text x="100" y="14" text-anchor="middle" font-size="14" font-weight="bold">Filament lamp (non-ohmic)</text>
+    <line x1="30" y1="250" x2="200" y2="250" stroke="#333" stroke-width="2"/>
+    <line x1="30" y1="250" x2="30" y2="40" stroke="#333" stroke-width="2"/>
+    <polygon points="200,250 192,246 192,254" fill="#333"/>
+    <polygon points="30,40 26,48 34,48" fill="#333"/>
+    <text x="205" y="254" font-size="12">V</text>
+    <text x="20" y="38" font-size="12">I</text>
+    <path d="M30,250 Q70,150 120,100 T190,75" fill="none" stroke="#d62728" stroke-width="2.5"/>
+    <text x="70" y="200" font-size="11" fill="#d62728">R increases</text>
+    <text x="70" y="216" font-size="11" fill="#d62728">as T rises</text>
+  </g>
+
+  <!-- ============ Panel 3: Diode ============ -->
+  <g transform="translate(500,20)">
+    <text x="100" y="14" text-anchor="middle" font-size="14" font-weight="bold">Diode (non-ohmic)</text>
+    <line x1="20" y1="160" x2="200" y2="160" stroke="#333" stroke-width="2"/>
+    <line x1="110" y1="250" x2="110" y2="40" stroke="#333" stroke-width="2"/>
+    <polygon points="200,160 192,156 192,164" fill="#333"/>
+    <polygon points="110,40 106,48 114,48" fill="#333"/>
+    <text x="205" y="164" font-size="12">V</text>
+    <text x="100" y="38" font-size="12">I</text>
+    <line x1="20" y1="160" x2="140" y2="160" stroke="#2ca02c" stroke-width="2.5"/>
+    <path d="M140,160 Q160,160 175,90 T195,55" fill="none" stroke="#2ca02c" stroke-width="2.5"/>
+    <text x="116" y="185" font-size="10" fill="#2ca02c">threshold ~0.7 V</text>
+  </g>
+</svg>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电学 · 复习笔记</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body class="theme-elec" data-title-key="page.title">
+<div class="wrap">
+
+<header class="hero">
+  <h1 data-i18n="hero.title">B.5 Current and circuits</h1>
+  <p data-i18n="hero.sub">IB Physics · 电流与电荷 · 电势差 · 功率 · 漂移速度 · 电阻与电阻率 · I–V 特性 · 直流电路 · 欧姆定律与能量</p>
+</header>
+
+<section class="card">
+  <h2><span class="num">1</span><span data-i18n="s1.h2">电流与电荷</span></h2>
+  <h3 data-i18n="s1.h3a">电流</h3>
+  <p data-i18n="s1.p1">带电粒子的定向移动（流动）。</p>
+  <h3 data-i18n="s1.h3b">某点的电荷量</h3>
+  <p data-i18n="s1.p2">该点的电流与电流流过时间的乘积。</p>
+  <div class="formula">$$Q = I \times t$$</div>
+  <table>
+    <tr><th data-i18n="s1.th1">符号</th><th data-i18n="s1.th2">物理量</th><th data-i18n="s1.th3">单位</th></tr>
+    <tr><td class="sym">Q</td><td data-i18n="s1.q">某点的电荷量</td><td data-i18n="s1.q.u">C（库仑）</td></tr>
+    <tr><td class="sym">I</td><td data-i18n="s1.i">电流</td><td data-i18n="s1.i.u">A（安培）</td></tr>
+    <tr><td class="sym">t</td><td data-i18n="s1.t">时间</td><td data-i18n="s1.t.u">s（秒）</td></tr>
+  </table>
+  <h3 data-i18n="s1.h3c">电流（定义）</h3>
+  <p data-i18n="s1.p3">电流是电荷流动的速率。</p>
+  <div class="formula">$$I = \frac{Q}{t} \quad \text{or} \quad I = \frac{\Delta Q}{\Delta t}$$</div>
+  <h3 data-i18n="s1.h3d">库仑（电荷的单位）</h3>
+  <div class="def" data-i18n="s1.def">当电流为 1 A 时，一秒内通过的电荷量定义为 1 库仑。</div>
+  <ul>
+    <li data-i18n="s1.l1" data-i18n-html>电荷是<strong>量子化</strong>的，取值不连续，而是离散的。</li>
+    <li data-i18n="s1.l2" data-i18n-html>$1\ \text{C} = 6.24 \times 10^{18}$ 个电子</li>
+    <li data-i18n="s1.l3" data-i18n-html>$1\ e = -1.6 \times 10^{-19}\ \text{C}$</li>
+    <li data-i18n="s1.l4">所有电荷量都是基本电荷的整数倍。</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span><span data-i18n="s2.h2">电势差（电压）</span></h2>
+  <div class="def" data-i18n="s2.def">如果在两点之间移动 1 C 电荷所需做的功为 1 J，则这两点之间的电势差为 1 V。</div>
+  <h3 data-i18n="s2.h3a">功、电势差与电荷的关系</h3>
+  <div class="formula">$$W = V \times Q \quad \text{或} \quad E = V \times Q$$</div>
+  <table>
+    <tr><th data-i18n="s1.th1">符号</th><th data-i18n="s1.th2">物理量</th><th data-i18n="s1.th3">单位</th></tr>
+    <tr><td class="sym">W</td><td data-i18n="s2.w">做的功</td><td data-i18n="s2.w.u">J（焦耳）</td></tr>
+    <tr><td class="sym">E</td><td data-i18n="s2.e">转移的能量</td><td data-i18n="s2.e.u">J</td></tr>
+    <tr><td class="sym">V</td><td data-i18n="s2.v">电势差</td><td data-i18n="s2.v.u">V（伏特）</td></tr>
+    <tr><td class="sym">Q</td><td data-i18n="s2.q">电荷量</td><td data-i18n="s2.q.u">C</td></tr>
+  </table>
+  <h3 data-i18n="s2.h3b">电压</h3>
+  <p data-i18n="s2.p1">单位电荷所转移的能量。</p>
+  <h3 data-i18n="s2.h3c">伏特（焦耳每库仑）</h3>
+  <p data-i18n="s2.p2">当 1 库仑电荷通过某元件转移了 1 焦耳能量时，该元件两端的电势差为 1 伏特。</p>
+  <div class="formula">$$V = \frac{J}{C}$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span><span data-i18n="s3.h2">功率</span></h2>
+  <h3 data-i18n="s3.h3a">功率、电流与电压的关系</h3>
+  <div class="formula">$$P = I \times V$$</div>
+  <table>
+    <tr><th data-i18n="s1.th1">符号</th><th data-i18n="s1.th2">物理量</th><th data-i18n="s1.th3">单位</th></tr>
+    <tr><td class="sym">I</td><td data-i18n="s3.i">电流</td><td>A</td></tr>
+    <tr><td class="sym">P</td><td data-i18n="s3.p">功率</td><td data-i18n="s3.p.u">W（瓦特）</td></tr>
+    <tr><td class="sym">V</td><td data-i18n="s3.v">电压</td><td>V</td></tr>
+  </table>
+  <h3 data-i18n="s3.h3b">功率、电流与电阻的关系</h3>
+  <div class="formula">$$P = I^2 R$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span><span data-i18n="s4.h2">漂移速度与电流</span></h2>
+  <h3 data-i18n="s4.h3a">漂移速度</h3>
+  <p data-i18n="s4.p1">电子的平均速度。</p>
+  <ul>
+    <li data-i18n="s4.l1" data-i18n-html><strong>注意：</strong>讨论电流时，我们假设所有电子都以相同的速度朝同一方向运动。</li>
+    <li data-i18n="s4.l2">电子实际上做不规则运动，但总体上倾向于朝一个方向漂移。</li>
+    <li data-i18n="s4.l3">漂移速度就是电子的平均速度。</li>
+  </ul>
+  <h3 data-i18n="s4.h3b">电流取决于漂移速度</h3>
+  <div class="formula">$$I = nqvA$$</div>
+  <table>
+    <tr><th data-i18n="s1.th1">符号</th><th data-i18n="s1.th2">物理量</th><th data-i18n="s1.th3">单位</th></tr>
+    <tr><td class="sym">I</td><td data-i18n="s1.i">电流</td><td>A</td></tr>
+    <tr><td class="sym">n</td><td data-i18n="s4.n">单位体积内的载流子数目</td><td data-i18n="s4.n.u">m⁻³</td></tr>
+    <tr><td class="sym">q</td><td data-i18n="s4.q">每个载流子所带电荷量</td><td data-i18n="s4.q.u">C</td></tr>
+    <tr><td class="sym">A</td><td data-i18n="s4.a">横截面积</td><td data-i18n="s4.a.u">m²</td></tr>
+    <tr><td class="sym">v</td><td data-i18n="s4.v">漂移速度</td><td data-i18n="s4.v.u">m/s</td></tr>
+  </table>
+  <h3 data-i18n="s4.h3c">公式推导</h3>
+  <div class="formula">$$I = \frac{Q}{t}$$</div>
+  <ul>
+    <li data-i18n="s4.d1" data-i18n-html>导线体积：$V = LA$</li>
+    <li data-i18n="s4.d2" data-i18n-html>电子总数 $= n \cdot V = nLA$</li>
+    <li data-i18n="s4.d3" data-i18n-html>总电荷量：$Q = nLAq$</li>
+    <li data-i18n="s4.d4" data-i18n-html>时间：$t = \dfrac{L}{v}$</li>
+  </ul>
+  <div class="formula">$$I = \frac{nLAq}{L/v} = nqvA$$</div>
+  <h3><span data-i18n="s4.h3d">常考题目</span><span class="tag" data-i18n="s4.tag">易错</span></h3>
+  <ul>
+    <li data-i18n="s4.e1" data-i18n-html>载流子数目加倍（$n \to 2n$），则 $I \to 2I$。</li>
+    <li data-i18n="s4.e2" data-i18n-html>横截面积加倍（$A \to 2A$），则 $I \to 2I$。</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span><span data-i18n="s5.h2">电阻与电阻率</span></h2>
+  <h3 data-i18n="s5.h3a">电阻</h3>
+  <div class="def" data-i18n="s5.def1">电阻定义为电势差与电流的比值，单位为欧姆（Ω）。</div>
+  <p data-i18n="s5.p1" data-i18n-html><strong>1 欧姆：</strong>当 1 V 的电势差使 1 A 的电流通过某元件时，该元件的电阻为 1 欧姆。</p>
+  <h3 data-i18n="s5.h3b">影响电阻的因素</h3>
+  <ul>
+    <li data-i18n="s5.f1" data-i18n-html><strong>长度 (L)：</strong>导线越长，电流越难通过。</li>
+    <li data-i18n="s5.f2" data-i18n-html><strong>横截面积 (A)：</strong>导线越粗，电子越容易通过。</li>
+    <li data-i18n="s5.f3" data-i18n-html><strong>电阻率 (ρ)：</strong>取决于材料本身。</li>
+  </ul>
+  <h3 data-i18n="s5.h3c">电阻率</h3>
+  <div class="def" data-i18n="s5.def2">材料的电阻率定义为：长 1 m、横截面积 1 m² 的该材料的电阻，单位为欧姆·米（Ω·m）。</div>
+  <div class="formula">$$\rho = \frac{RA}{L} \qquad \Rightarrow \qquad R = \frac{\rho L}{A}$$</div>
+  <table>
+    <tr><th data-i18n="s1.th1">符号</th><th data-i18n="s1.th2">物理量</th><th data-i18n="s1.th3">单位</th></tr>
+    <tr><td class="sym">ρ</td><td data-i18n="s5.rho">电阻率</td><td>Ω·m</td></tr>
+    <tr><td class="sym">R</td><td data-i18n="s5.r">电阻</td><td>Ω</td></tr>
+    <tr><td class="sym">L</td><td data-i18n="s5.l">长度</td><td>m</td></tr>
+    <tr><td class="sym">A</td><td data-i18n="s5.a">横截面积</td><td>m²</td></tr>
+  </table>
+  <div class="note" data-i18n="s5.note" data-i18n-html><strong>注意：</strong>实际算出的物体电阻率非常小，大约在 $10^{-7}\ \Omega\cdot\text{m}$ 量级，主要原因是横截面积非常小。做题时注意单位换算。测量时常先测出直径，再用 $R = \dfrac{\rho L}{\pi r^2}$ 计算。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span><span data-i18n="s6.h2">I–V 特性曲线：欧姆与非欧姆导体</span></h2>
+  <p data-i18n="s6.p1" data-i18n-html>电流（$I$）随电势差（$V$）变化的图像，反映了元件的特性。</p>
+  <figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="720" height="320" viewBox="0 0 720 320" font-family="inherit">
+      <rect width="720" height="320" fill="#ffffff"/>
+      <g transform="translate(20,20)">
+        <text id="svg-t1" x="100" y="14" text-anchor="middle" font-size="14" font-weight="bold">欧姆导体</text>
+        <line x1="30" y1="250" x2="200" y2="250" stroke="#333" stroke-width="2"/>
+        <line x1="30" y1="250" x2="30" y2="40" stroke="#333" stroke-width="2"/>
+        <polygon points="200,250 192,246 192,254" fill="#333"/>
+        <polygon points="30,40 26,48 34,48" fill="#333"/>
+        <text x="205" y="254" font-size="12">V</text>
+        <text x="20" y="38" font-size="12">I</text>
+        <line x1="30" y1="250" x2="190" y2="60" stroke="#2563eb" stroke-width="2.5"/>
+        <text id="svg-t1a" x="110" y="120" font-size="11" fill="#2563eb">I 与 V 成正比</text>
+        <text id="svg-t1b" x="110" y="135" font-size="11" fill="#2563eb">（R 恒定）</text>
+      </g>
+      <g transform="translate(260,20)">
+        <text id="svg-t2" x="100" y="14" text-anchor="middle" font-size="14" font-weight="bold">灯丝（非欧姆）</text>
+        <line x1="30" y1="250" x2="200" y2="250" stroke="#333" stroke-width="2"/>
+        <line x1="30" y1="250" x2="30" y2="40" stroke="#333" stroke-width="2"/>
+        <polygon points="200,250 192,246 192,254" fill="#333"/>
+        <polygon points="30,40 26,48 34,48" fill="#333"/>
+        <text x="205" y="254" font-size="12">V</text>
+        <text x="20" y="38" font-size="12">I</text>
+        <path d="M30,250 Q70,150 120,100 T190,75" fill="none" stroke="#c62828" stroke-width="2.5"/>
+        <text id="svg-t2a" x="66" y="200" font-size="11" fill="#c62828">温度升高</text>
+        <text id="svg-t2b" x="66" y="216" font-size="11" fill="#c62828">R 增大</text>
+      </g>
+      <g transform="translate(500,20)">
+        <text id="svg-t3" x="100" y="14" text-anchor="middle" font-size="14" font-weight="bold">二极管（非欧姆）</text>
+        <line x1="20" y1="160" x2="200" y2="160" stroke="#333" stroke-width="2"/>
+        <line x1="110" y1="250" x2="110" y2="40" stroke="#333" stroke-width="2"/>
+        <polygon points="200,160 192,156 192,164" fill="#333"/>
+        <polygon points="110,40 106,48 114,48" fill="#333"/>
+        <text x="205" y="164" font-size="12">V</text>
+        <text x="100" y="38" font-size="12">I</text>
+        <line x1="20" y1="160" x2="140" y2="160" stroke="#059669" stroke-width="2.5"/>
+        <path d="M140,160 Q160,160 175,90 T195,55" fill="none" stroke="#059669" stroke-width="2.5"/>
+        <text id="svg-t3a" x="112" y="185" font-size="10" fill="#059669">阈值约 0.7 V</text>
+      </g>
+    </svg>
+    <figcaption data-i18n="s6.cap">欧姆导体、灯丝灯泡与二极管的 I–V 特性曲线</figcaption>
+  </figure>
+  <h3 data-i18n="s6.h3a">欧姆导体</h3>
+  <ul>
+    <li data-i18n="s6.o1" data-i18n-html>$R$ 为<strong>常数</strong>。</li>
+    <li data-i18n="s6.o2" data-i18n-html>在温度不变的前提下，通过欧姆导体的电流与其两端的电势差<strong>成正比</strong>。</li>
+    <li data-i18n="s6.o3" data-i18n-html>I–V 图像是一条<strong>过原点的直线</strong>。</li>
+    <li data-i18n="s6.o4">例子：温度恒定的金属导线。</li>
+  </ul>
+  <h3 data-i18n="s6.h3b">非欧姆导体</h3>
+  <p data-i18n="s6.n1" data-i18n-html>I–V 图像<strong>不是</strong>直线 —— 电阻会发生变化。</p>
+  <p><strong data-i18n="s6.fil">灯丝灯泡</strong></p>
+  <ul>
+    <li data-i18n="s6.f1">电流增大时，灯丝发热，温度升高。</li>
+    <li data-i18n="s6.f2" data-i18n-html>温度越高，电阻越大，因此图像<strong>弯曲并趋于平缓</strong>（斜率减小）。</li>
+    <li data-i18n="s6.f3" data-i18n-html>$R = \dfrac{V}{I}$ 随 $V$ 增大而增大。</li>
+  </ul>
+  <p><strong data-i18n="s6.dio">二极管（半导体二极管）</strong></p>
+  <ul>
+    <li data-i18n="s6.d1" data-i18n-html>只允许电流沿<strong>一个方向</strong>流动。</li>
+    <li data-i18n="s6.d2" data-i18n-html><strong>反向偏置</strong>时，几乎没有电流。</li>
+    <li data-i18n="s6.d3" data-i18n-html><strong>正向偏置</strong>时，在达到阈值电压（约 0.7 V）之前电流很小，之后电流急剧上升。</li>
+  </ul>
+  <div class="note" data-i18n="s6.note">常见半导体元件：热敏电阻（thermistor）、光敏电阻（LDR）、二极管（diode）。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">7</span><span data-i18n="s7.h2">直流电路：电动势与内阻</span></h2>
+  <h3 data-i18n="s7.h3a">电动势 (e.m.f.)</h3>
+  <div class="def" data-i18n="s7.def" data-i18n-html>电动势是电池为每库仑电荷所提供的电能。常用 $\varepsilon$ 表示，单位为伏特（V）。它代表电池产生的总电压。</div>
+  <h3 data-i18n="s7.h3b">负载两端的电势差</h3>
+  <p data-i18n="s7.p1" data-i18n-html>负载电阻 $R$ 两端的电势差，是 1 库仑电荷流过该负载时所转移的能量。</p>
+  <ul>
+    <li data-i18n="s7.l1" data-i18n-html>电势差用 $V$ 表示，单位为伏特（V）。</li>
+    <li data-i18n="s7.l2">电势差可以理解为用电元件两端的电压。</li>
+    <li data-i18n="s7.l3" data-i18n-html>对于简单电路，元件两端的电压也就是电池两端的电压，称为<strong>端电压</strong>（terminal p.d.）。</li>
+  </ul>
+  <h3 data-i18n="s7.h3c">能量守恒</h3>
+  <p data-i18n="s7.p2">电源每库仑提供的能量 = 负载消耗的能量 + 内阻消耗的能量：</p>
+  <div class="formula">$$\varepsilon = IR + Ir = V + v \qquad \Rightarrow \qquad V = \varepsilon - Ir$$</div>
+  <table>
+    <tr><th data-i18n="s1.th1">符号</th><th data-i18n="s1.th2">物理量</th><th data-i18n="s1.th3">单位</th></tr>
+    <tr><td class="sym">ε</td><td data-i18n="s7.eps">电动势</td><td>V</td></tr>
+    <tr><td class="sym">V</td><td data-i18n="s7.term">端电压（负载两端电压）</td><td>V</td></tr>
+    <tr><td class="sym">I</td><td data-i18n="s1.i">电流</td><td>A</td></tr>
+    <tr><td class="sym">R</td><td data-i18n="s7.load">负载电阻</td><td>Ω</td></tr>
+    <tr><td class="sym">r</td><td data-i18n="s7.int">内阻</td><td>Ω</td></tr>
+  </table>
+  <div class="note" data-i18n="s7.note" data-i18n-html><strong>注意：</strong>内阻一般非常小（小于 1 Ω）；但在极端情况下（如高压电）也可能非常大。</div>
+  <h3 data-i18n="s7.h3d">测量内阻与电动势</h3>
+  <p data-i18n="s7.p3" data-i18n-html>作出 $V$（端电压）随 $I$（电流）变化的图像 $V = \varepsilon - Ir$：</p>
+  <ul>
+    <li data-i18n="s7.m1" data-i18n-html>纵轴截距（y 截距）= 电动势 $\varepsilon$。</li>
+    <li data-i18n="s7.m2" data-i18n-html>斜率的绝对值 = 内阻 $r$。</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">8</span><span data-i18n="s8.h2">电压、电阻与电表</span></h2>
+  <h3 data-i18n="s8.h3a">电压</h3>
+  <ul>
+    <li data-i18n="s8.v1">能够提供驱动力、驱动电流在电路中流动的电势差。</li>
+    <li data-i18n="s8.v2">定义：在电池两端测得的电势差。</li>
+    <li data-i18n="s8.v3">电压是单位电荷所转移的能量。</li>
+  </ul>
+  <div class="formula">$$V = \frac{E}{Q} \qquad 1\ \text{V} = 1\ \text{J}/1\ \text{C}$$</div>
+  <table>
+    <tr><th data-i18n="s1.th1">符号</th><th data-i18n="s1.th2">物理量</th><th data-i18n="s1.th3">单位</th></tr>
+    <tr><td class="sym">V</td><td data-i18n="s3.v">电压</td><td>V</td></tr>
+    <tr><td class="sym">E</td><td data-i18n="s2.e">转移的能量</td><td>J</td></tr>
+    <tr><td class="sym">Q</td><td data-i18n="s2.q">电荷量</td><td>C</td></tr>
+  </table>
+  <p data-i18n="s8.common">常见电压值：</p>
+  <ul>
+    <li data-i18n="s8.c1">干电池电压：1.5 V</li>
+    <li data-i18n="s8.c2">市电电压：230 V</li>
+    <li data-i18n="s8.c3" data-i18n-html>电池<strong>串联</strong>：电压<strong>叠加</strong>。</li>
+    <li data-i18n="s8.c4" data-i18n-html>电池<strong>并联</strong>：电压<strong>不变</strong>。</li>
+  </ul>
+  <h3 data-i18n="s8.h3b">电阻</h3>
+  <div class="def" data-i18n="s8.def" data-i18n-html>电阻是材料阻碍电流流动的能力，用 $R$ 表示，单位为欧姆（Ω）。</div>
+  <ul>
+    <li data-i18n="s8.r1">电阻大 → 绝缘体；电阻小 → 导体。</li>
+  </ul>
+  <h3 data-i18n="s8.h3c">电流表与电压表</h3>
+  <ul>
+    <li data-i18n="s8.a1" data-i18n-html>理想电流表（ammeter）：内阻为 <strong>0 Ω</strong>（串联接入）。</li>
+    <li data-i18n="s8.a2" data-i18n-html>理想电压表（voltmeter）：内阻为 <strong>无穷大</strong>（并联接入）。</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">9</span><span data-i18n="s9.h2">欧姆定律、功率与电路中的能量</span></h2>
+  <h3 data-i18n="s9.h3a">欧姆定律</h3>
+  <div class="def" data-i18n="s9.def" data-i18n-html>通过导体的电流与其两端的电压成正比（温度恒定时）：$V = IR$。</div>
+  <table>
+    <tr><th data-i18n="s1.th1">符号</th><th data-i18n="s1.th2">物理量</th><th data-i18n="s1.th3">单位</th></tr>
+    <tr><td class="sym">V</td><td data-i18n="s3.v">电压</td><td>V</td></tr>
+    <tr><td class="sym">I</td><td data-i18n="s1.i">电流</td><td>A</td></tr>
+    <tr><td class="sym">R</td><td data-i18n="s5.r">电阻</td><td>Ω</td></tr>
+  </table>
+  <h3 data-i18n="s9.h3b">电路中的功率</h3>
+  <p data-i18n="s9.p1">功率、电流与电压的关系：</p>
+  <div class="formula">$$P = I \times V$$</div>
+  <table>
+    <tr><th data-i18n="s1.th1">符号</th><th data-i18n="s1.th2">物理量</th><th data-i18n="s1.th3">单位</th></tr>
+    <tr><td class="sym">P</td><td data-i18n="s3.p">功率</td><td>W</td></tr>
+    <tr><td class="sym">I</td><td data-i18n="s1.i">电流</td><td>A</td></tr>
+    <tr><td class="sym">V</td><td data-i18n="s3.v">电压</td><td>V</td></tr>
+  </table>
+  <p data-i18n="s9.p2" data-i18n-html>由 $I = \dfrac{Q}{t}$ 与 $V = \dfrac{E}{Q}$ 可推导：</p>
+  <div class="formula">$$I \cdot V = \frac{Q}{t} \cdot \frac{E}{Q} = \frac{E}{t} = P$$</div>
+  <h3 data-i18n="s9.h3c">电路中发热损耗的功率</h3>
+  <div class="formula">$$P = I^2 R$$</div>
+  <table>
+    <tr><th data-i18n="s1.th1">符号</th><th data-i18n="s1.th2">物理量</th><th data-i18n="s1.th3">单位</th></tr>
+    <tr><td class="sym">P</td><td data-i18n="s3.p">功率</td><td>W</td></tr>
+    <tr><td class="sym">I</td><td data-i18n="s1.i">电流</td><td>A</td></tr>
+    <tr><td class="sym">R</td><td data-i18n="s5.r">电阻</td><td>Ω</td></tr>
+  </table>
+  <h3 data-i18n="s9.h3d">电路中的能量</h3>
+  <div class="formula">$$E = I \times V \times t$$</div>
+  <table>
+    <tr><th data-i18n="s1.th1">符号</th><th data-i18n="s1.th2">物理量</th><th data-i18n="s1.th3">单位</th></tr>
+    <tr><td class="sym">E</td><td data-i18n="s2.e">转移的能量</td><td>J</td></tr>
+    <tr><td class="sym">I</td><td data-i18n="s1.i">电流</td><td>A</td></tr>
+    <tr><td class="sym">V</td><td data-i18n="s3.v">电压</td><td>V</td></tr>
+    <tr><td class="sym">t</td><td data-i18n="s1.t">时间</td><td>s</td></tr>
+  </table>
+</section>
+
+<footer data-i18n="footer">电学复习笔记 · 公式由 MathJax 渲染</footer>
+</div>
+
+<script src="lang-electricity.js"></script>
+<script src="i18n.js"></script>
+<script>
+window.onI18nApplied = function (lang, dict) {
+  var pack = dict[lang] || dict.zh || {};
+  var map = {
+    "svg-t1": "s6.svg1",
+    "svg-t1a": "s6.svg1a",
+    "svg-t1b": "s6.svg1b",
+    "svg-t2": "s6.svg2",
+    "svg-t2a": "s6.svg2a",
+    "svg-t2b": "s6.svg2b",
+    "svg-t3": "s6.svg3",
+    "svg-t3a": "s6.svg3a"
+  };
+  Object.keys(map).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el && pack[map[id]]) el.textContent = pack[map[id]];
+  });
+};
+PhysI18n.initTopbar({ homeHref: "index.html" });
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A.1 Kinematics · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>A.1 Kinematics</h1>
+  <p>位置 · 速度 · 加速度 · 匀加速公式 · 抛体 · 流体阻力（定性）</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>如何定量/定性描述物体运动？如何预测时空中的位置？一维与二维运动分析如何解决实际问题？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>核心定义</h2>
+  <table>
+    <tr><th>量</th><th>定义</th><th>类型</th></tr>
+    <tr><td>位移 $s$ / $\Delta x$</td><td>位置变化（有方向）</td><td>矢量</td></tr>
+    <tr><td>距离 distance</td><td>路径长度</td><td>标量</td></tr>
+    <tr><td>速度 $v$</td><td>位移对时间的变化率</td><td>矢量</td></tr>
+    <tr><td>速率 speed</td><td>路程对时间的变化率</td><td>标量</td></tr>
+    <tr><td>加速度 $a$</td><td>速度对时间的变化率</td><td>矢量</td></tr>
+  </table>
+  <div class="formula">$$v=\frac{\Delta s}{\Delta t}\quad\text{(average)}\qquad a=\frac{\Delta v}{\Delta t}$$</div>
+  <div class="note"><strong>瞬时 vs 平均：</strong>平均量用一段时间的总变化；瞬时量是该时刻的极限值。图像上，瞬时速度/加速度对应切线梯度。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>图像解读</h2>
+  <figure>
+    <img src="../微信图片_20260705140758_36_110.png" alt="distance-time">
+    <figcaption>距离–时间图示例</figcaption>
+  </figure>
+  <ul>
+    <li><strong>s–t / 距离–时间：</strong>梯度 = 速度（或速率）</li>
+    <li><strong>v–t：</strong>梯度 = 加速度；曲线下面积 = 位移</li>
+    <li><strong>a–t：</strong>面积 = 速度变化 $\Delta v$</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>匀加速直线运动（suvat）</h2>
+  <div class="def">仅当加速度<strong>恒定</strong>时可用下列方程。</div>
+  <div class="formula">
+    $$v=u+at$$
+    $$s=\tfrac12(u+v)t$$
+    $$s=ut+\tfrac12 at^2$$
+    $$v^2=u^2+2as$$
+  </div>
+  <table>
+    <tr><th>符号</th><th>含义</th></tr>
+    <tr><td>$u$</td><td>初速度</td></tr>
+    <tr><td>$v$</td><td>末速度</td></tr>
+    <tr><td>$a$</td><td>加速度</td></tr>
+    <tr><td>$t$</td><td>时间</td></tr>
+    <tr><td>$s$</td><td>位移</td></tr>
+  </table>
+  <h3>自由落体（取向下为正或统一符号约定）</h3>
+  <div class="formula">$$h=\tfrac12 gt^2\qquad t=\sqrt{\frac{2h}{g}}\qquad v=\sqrt{2gh}$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>非匀加速与终端速度</h2>
+  <p>有流体阻力时，加速度通常<strong>不恒定</strong>。阻力随速率增大，合加速度减小，直至阻力与重力平衡 → <strong>终端速度 terminal speed</strong>。</p>
+  <figure>
+    <img src="../微信图片_20260705141413_37_110.jpg" alt="skydiver">
+    <figcaption>跳伞者：加速 → 终端速度 → 开伞减速 → 新终端速度</figcaption>
+  </figure>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>相对速度</h2>
+  <div class="formula">$$\vec{v}_{A\text{ relative to }B}=\vec{v}_A-\vec{v}_B$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>抛体运动 Projectile motion</h2>
+  <div class="def">忽略流体阻力时：水平方向匀速；竖直方向匀加速（$a_y=g$）。轨迹为抛物线（方程本身不作要求）。</div>
+  <h3>初速度分解</h3>
+  <div class="formula">$$v_x=v_0\cos\theta\qquad v_y=v_0\sin\theta$$</div>
+  <h3>位移分量</h3>
+  <div class="formula">
+    $$s_x=s_{x0}+v_x t$$
+    $$s_y=s_{y0}+v_y t+\tfrac12 a_y t^2$$
+  </div>
+  <ul>
+    <li>需熟悉：水平抛出、斜向上、斜向下</li>
+    <li>近地表面 $g$ 取恒定</li>
+    <li><strong>有空气阻力（定性）：</strong>飞行时间缩短、轨迹变“矮”、射程减小、可能出现终端速度</li>
+  </ul>
+  <div class="note"><strong>Exam tip：</strong>抛体题先建坐标、写分量、再联立时间。能量法有时可替代运动学（见 Linking）。</div>
+</section>
+
+<div class="prevnext">
+  <a href="skills.html"><span>上一章</span>← Skills</a>
+  <a href="a2-forces-momentum.html"><span>下一章</span>A.2 Forces →</a>
+</div>
+<footer>A.1 · IB Physics HL · ~9 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

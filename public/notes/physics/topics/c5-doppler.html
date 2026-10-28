@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C.5 Doppler effect · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>C.5 Doppler effect</h1>
+  <p>声波与光波多普勒 · 波面图 · 光谱红移蓝移 · HL 公式</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>如何定性与定量解释多普勒效应？有哪些应用？不同类型波为何公式不同？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>本质</h2>
+  <div class="def">波源与观测者有相对运动时，观测频率/波长相对源频率发生变化 → <strong>多普勒效应</strong>。</div>
+  <ul>
+    <li>靠近 → 频率升高（波长缩短）</li>
+    <li>远离 → 频率降低（波长变长）</li>
+    <li>可用波面图表示：源动或观测者动时波面疏密变化</li>
+  </ul>
+  <div class="note">题目<strong>不同时</strong>出现源与观测者都在运动的情况。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>光 / 电磁波（$v\ll c$）</h2>
+  <div class="formula">$$\frac{\Delta f}{f}=\frac{\Delta\lambda}{\lambda}\approx\frac{v}{c}$$</div>
+  <p>光谱线移动可推断恒星、星系等天体的径向运动（靠近蓝移、远离红移）。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>声波 / 机械波公式 <span class="badge badge-hl">HL</span></h2>
+  <p>设介质中声速为 $v$：</p>
+  <h3>源运动（观测者静止）</h3>
+  <div class="formula">$$f' = f\,\frac{v}{v\pm u_s}$$</div>
+  <p>$u_s$：源速。源<strong>靠近</strong>观测者时分母用 $v-u_s$（频率升高）；远离用 $v+u_s$。</p>
+  <h3>观测者运动（源静止）</h3>
+  <div class="formula">$$f' = f\,\frac{v\pm u_o}{v}$$</div>
+  <p>$u_o$：观测者速率。观测者<strong>靠近</strong>源时分子用 $v+u_o$；远离用 $v-u_o$。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>应用</h2>
+  <ul>
+    <li>医学超声（血流测速等）</li>
+    <li>雷达测速</li>
+    <li>天体光谱测径向速度</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>为何光与声公式不同？</h2>
+  <ul>
+    <li>声波：有介质；源速与观测者速相对于介质不对称 → 两套公式</li>
+    <li>光波：真空中光速恒定；低速近似用 $\Delta f/f\approx v/c$</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>Exam tips</h2>
+  <ul>
+    <li>先判断谁在动：源还是观测者</li>
+    <li>记忆口诀：靠近 → 频率升 → 选使 $f'$ 变大的符号</li>
+    <li>光波题：$v\ll c$ 才用近似式</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="c4-standing-waves.html"><span>上一章</span>← C.4</a>
+  <a href="../index.html"><span>目录</span>Index（下一批 Theme D）</a>
+</div>
+<footer>C.5 · SL 2 h · HL +2 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

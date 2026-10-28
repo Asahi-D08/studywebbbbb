@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D.1 Gravitational fields · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>D.1 Gravitational fields</h1>
+  <p>开普勒 · 万有引力 · 场强 · HL 势能 · 逃逸速度 · 轨道</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>如何量化引力场？引力场理解如何支持太阳系探索？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>开普勒三定律</h2>
+  <ol>
+    <li>行星轨道为椭圆，太阳在一个焦点</li>
+    <li>相等时间内扫过相等面积（面积速度恒定）</li>
+    <li>$T^2\propto r^3$（圆轨道近似下与牛顿引力一致）</li>
+  </ol>
+  <div class="note">计算轨道时大纲假定<strong>圆轨道</strong>。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>万有引力定律</h2>
+  <div class="formula">$$F=G\frac{m_1 m_2}{r^2}$$</div>
+  <ul>
+    <li>点质量，或均匀密度球体（质量可视为集中在球心）</li>
+    <li>两物体连线上的合场强可求</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>引力场强 $g$</h2>
+  <div class="def">某点场强 = 放在该点的小试验质量所受的力 / 质量。</div>
+  <div class="formula">$$g=\frac{F}{m}=\frac{GM}{r^2}$$</div>
+  <p>场线：指向质量，径向；近大质量天体表面可视为均匀场。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>势能与势 <span class="badge badge-hl">HL 核心</span></h2>
+  <div class="def">无穷远为零。组装系统所做的功 = 引力势能。</div>
+  <div class="formula">
+    $$E_p=-\frac{G m_1 m_2}{r}$$
+    $$V_g=-\frac{GM}{r}$$
+    $$g=-\frac{\Delta V_g}{\Delta r}\qquad W=m\Delta V_g$$
+  </div>
+  <ul>
+    <li>等势面与场线垂直；沿等势面移动质量做功为零</li>
+    <li>可用势来“映射”场</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>逃逸速度与轨道速度 <span class="badge badge-hl">HL</span></h2>
+  <div class="formula">
+    $$v_{\text{esc}}=\sqrt{\frac{2GM}{r}}$$
+    $$v_{\text{orbital}}=\sqrt{\frac{GM}{r}}$$
+  </div>
+  <p>（圆轨道）。大气黏滞阻力会使轨道高度与速率发生定性变化（阻力 → 螺旋下降等）。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>Exam tips</h2>
+  <ul>
+    <li>势能、势均为负；$r$ 增大 → 势能升高（变得不那么负）</li>
+    <li>变轨：比较动能、势能、总能量 $E=E_k+E_p$</li>
+    <li>$v_{\text{esc}}=\sqrt{2}\,v_{\text{orbital}}$（同一 $r$）</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="c5-doppler.html"><span>上一章</span>← C.5</a>
+  <a href="d2-em-fields.html"><span>下一章</span>D.2 Electric &amp; magnetic →</a>
+</div>
+<footer>D.1 · SL 5 h · HL +7 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

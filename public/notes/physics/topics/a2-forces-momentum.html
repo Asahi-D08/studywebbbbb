@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A.2 Forces and momentum · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>A.2 Forces and momentum</h1>
+  <p>牛顿定律 · 自由体图 · 接触力/场力 · 动量与冲量 · 碰撞 · 圆周运动</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>如何用图与代数表示力？如何用牛顿定律建模？如何用动量预测相互作用？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>牛顿三定律</h2>
+  <h3>N1 — 惯性定律</h3>
+  <div class="def">若合外力为零，物体速度保持不变（静止或匀速直线运动）。</div>
+  <div class="formula">$$F_{\text{net}}=0 \;\Rightarrow\; a=0 \;\Rightarrow\; \Delta v=0$$</div>
+  <h3>N2</h3>
+  <div class="def">合外力等于动量变化率；质量恒定时 $F=ma$。</div>
+  <div class="formula">$$F=\frac{\Delta p}{\Delta t}\qquad (m\text{ constant: }F=ma)$$</div>
+  <h3>N3</h3>
+  <div class="def">作用力与反作用力：大小相等、方向相反、作用在<strong>不同物体</strong>上，成对出现。</div>
+  <div class="note"><strong>Exam tip：</strong>自由体图只画<strong>作用在该物体上</strong>的力；N3 力对不画在同一物体上。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>自由体图与合力</h2>
+  <p>将物体隔离，标出所有力，正交分解后求合力 $\vec{F}_{\text{net}}$，再由 N2 求加速度。</p>
+  <div class="formula">$$\sum F_x=ma_x\qquad \sum F_y=ma_y$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>接触力 Contact forces</h2>
+  <table>
+    <tr><th>力</th><th>公式 / 说明</th></tr>
+    <tr><td>法向力 $F_N$</td><td>垂直于接触面，由表面提供</td></tr>
+    <tr><td>静摩擦</td><td>$F_f \le \mu_s F_N$</td></tr>
+    <tr><td>动摩擦</td><td>$F_f=\mu_d F_N$（平行于接触面）</td></tr>
+    <tr><td>张力 Tension</td><td>沿绳/弦，理想轻绳各处张力大小相等</td></tr>
+    <tr><td>弹性恢复力</td><td>胡克定律 $F_H=-kx$</td></tr>
+    <tr><td>黏滞阻力（小球）</td><td>$F_d=6\pi\eta r v$（Stokes）</td></tr>
+    <tr><td>浮力 Buoyancy</td><td>$F_b=\rho V g$（排开流体重量）</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>场力 Field forces</h2>
+  <ul>
+    <li>重力：$F_g=mg$（近地）</li>
+    <li>电场力 $F_e$、磁场力 $F_m$（详见 Theme D）</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>动量、冲量与碰撞</h2>
+  <div class="formula">$$p=mv\qquad J=F\Delta t=\Delta p$$</div>
+  <div class="def">无外力为零时，系统<strong>线动量守恒</strong>。</div>
+  <table>
+    <tr><th>类型</th><th>动量</th><th>动能</th></tr>
+    <tr><td>弹性碰撞 Elastic</td><td>守恒</td><td>守恒</td></tr>
+    <tr><td>非弹性 Inelastic</td><td>守恒</td><td>不守恒（部分→其他形式）</td></tr>
+    <tr><td>完全非弹性（黏在一起）</td><td>守恒</td><td>损失最大</td></tr>
+    <tr><td>爆炸 Explosions</td><td>守恒（内力主导）</td><td>通常增加（化学能等释放）</td></tr>
+  </table>
+  <div class="note"><strong>HL：</strong>碰撞/爆炸的定量处理可到<strong>二维</strong>。SL 限一维。不要求联立动量+能量的复杂方程组作为必考技能，但理解能量差异是必须的。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>圆周运动 Circular motion</h2>
+  <div class="def">速率可恒定，但速度方向不断变 → 有向心加速度，由<strong>向心力</strong>（合力指向圆心）提供。</div>
+  <div class="formula">
+    $$a=\frac{v^2}{r}=\omega^2 r=\frac{4\pi^2 r}{T^2}$$
+    $$v=\omega r=\frac{2\pi r}{T}$$
+    $$F_c=\frac{mv^2}{r}=m\omega^2 r$$
+  </div>
+  <ul>
+    <li>向心力<strong>不做功</strong>（与速度垂直）</li>
+    <li>水平与竖直面内的匀速/非匀速圆周都需理解</li>
+    <li>竖直面：通常只要求最高点、最低点的力分析</li>
+    <li><strong>不要求</strong>倾斜弯道（banked）的定量计算</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="a1-kinematics.html"><span>上一章</span>← A.1</a>
+  <a href="a3-work-energy-power.html"><span>下一章</span>A.3 Work &amp; energy →</a>
+</div>
+<footer>A.2 · IB Physics HL · ~10 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

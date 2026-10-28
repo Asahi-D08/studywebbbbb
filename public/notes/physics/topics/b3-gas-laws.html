@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.3 Gas laws · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>B.3 Gas laws</h1>
+  <p>压强 · 物质的量 · 理想气体 · 气体定律 · 分子动理论 · 内能</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>气体宏观量如何联系单个分子行为？哪些假设与观测导向普适气体定律？模型如何解释现象？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>压强与物质的量</h2>
+  <div class="formula">$$P=\frac{F}{A}\qquad n=\frac{N}{N_A}$$</div>
+  <table>
+    <tr><th>符号</th><th>含义</th></tr>
+    <tr><td>$P$</td><td>压强（垂直力 / 面积）</td></tr>
+    <tr><td>$n$</td><td>物质的量（mol）</td></tr>
+    <tr><td>$N$</td><td>分子数</td></tr>
+    <tr><td>$N_A$</td><td>阿伏伽德罗常量</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>理想气体模型</h2>
+  <div class="def">理想气体是用<strong>分子动理论</strong>描述的理想化模型，用来近似真实气体。</div>
+  <p>经验定律（定压 / 定容 / 定温）可合并为：</p>
+  <div class="formula">$$\frac{PV}{T}=\text{constant}$$</div>
+  <div class="formula">$$PV=Nk_B T\qquad PV=nRT$$</div>
+  <div class="note"><strong>何时近似好：</strong>温度不太低、压强不太高、密度不太大时，真实气体更接近理想。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>压强的微观起源</h2>
+  <p>分子与器壁碰撞引起动量变化 → 产生压强。由此可得：</p>
+  <div class="formula">$$P=\tfrac13\rho \overline{v^2}$$</div>
+  <p>$\rho$：密度；$\overline{v^2}$：分子平动速率平方的平均值。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>理想气体的内能（单原子）</h2>
+  <div class="formula">$$U=\tfrac32 Nk_B T=\tfrac32 nRT$$</div>
+  <p>对单原子理想气体：内能只取决于温度（与体积无关）。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>真实气体 vs 理想气体</h2>
+  <table>
+    <tr><th>理想气体假设</th><th>真实气体</th></tr>
+    <tr><td>分子体积可忽略</td><td>高压时分子体积不可忽略</td></tr>
+    <tr><td>无分子间力（除碰撞）</td><td>低温/高密度时分子力显著</td></tr>
+    <tr><td>弹性碰撞</td><td>近似成立</td></tr>
+  </table>
+  <p>状态变化可用 <strong>$P$–$V$ 图</strong>表示（定容、定压、等温等过程）。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>Exam tips</h2>
+  <ul>
+    <li>温度必须用开尔文代入 $PV=nRT$</li>
+    <li>先分清：哪个量恒定（$P$、$V$ 或 $T$）</li>
+    <li>单原子 $U=\tfrac32 nRT$；勿把双原子公式擅自套用（除非题目给出）</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="b2-greenhouse.html"><span>上一章</span>← B.2</a>
+  <a href="b4-thermodynamics.html"><span>下一章</span>B.4 Thermodynamics (HL) →</a>
+</div>
+<footer>B.3 · IB Physics HL · ~6 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

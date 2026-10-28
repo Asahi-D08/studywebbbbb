@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.1 Thermal energy transfers · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>B.1 Thermal energy transfers</h1>
+  <p>分子模型 · 温度 · 内能 · 比热与潜热 · 传导 · 对流 · 辐射 · 黑体</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>宏观观测如何反映微观性质？能量如何在系统内/系统间转移？如何由一个物理量推断其他性质？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>物态与密度</h2>
+  <ul>
+    <li><strong>固体：</strong>分子间距近，有序排列，振动为主</li>
+    <li><strong>液体：</strong>分子可滑动，近程有序</li>
+    <li><strong>气体：</strong>分子间距大，自由运动，相互作用弱</li>
+  </ul>
+  <div class="formula">$$\rho=\frac{m}{V}$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>温度与内能</h2>
+  <table>
+    <tr><th>要点</th><th>内容</th></tr>
+    <tr><td>温标</td><td>开尔文 K 与摄氏 ℃；$T(\mathrm{K})=t(^\circ\mathrm{C})+273$</td></tr>
+    <tr><td>温差</td><td>$\Delta T$ 用 K 或 ℃ 数值相同</td></tr>
+    <tr><td>微观意义</td><td>开尔文温度度量粒子平均动能</td></tr>
+  </table>
+  <div class="formula">$$E_k=\tfrac32 k_B T\quad\text{（单粒子平均平动动能，理想气体）}$$</div>
+  <div class="def"><strong>内能 $U$：</strong>分子间势能总和 + 分子无规则动能总和。</div>
+  <p>热传递方向由<strong>温度差</strong>决定：从高温物体到低温物体。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>物态变化与热量计算</h2>
+  <div class="def">相变：恒温下因能量改变导致粒子行为改变（熔化、凝固、沸腾、冷凝、蒸发）。</div>
+  <div class="formula">$$Q=mc\Delta T\qquad Q=mL$$</div>
+  <table>
+    <tr><th>符号</th><th>含义</th></tr>
+    <tr><td>$c$</td><td>比热容 specific heat capacity</td></tr>
+    <tr><td>$L$</td><td>比潜热（熔解或汽化）specific latent heat</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>三种传热机制</h2>
+  <h3>传导 Conduction</h3>
+  <p>通过粒子动能差传递；固体中常见。</p>
+  <div class="formula">$$\frac{\Delta Q}{\Delta t}=-kA\frac{\Delta T}{\Delta x}$$</div>
+  <p>$k$：热导率；$A$：截面积；$\Delta T/\Delta x$：温度梯度。</p>
+  <h3>对流 Convection</h3>
+  <p>流体因密度差产生宏观流动，带走热能（定性）。</p>
+  <h3>辐射 Radiation</h3>
+  <p>以电磁波形式从表面发射能量。黑体可用 Stefan–Boltzmann 定律：</p>
+  <div class="formula">$$L=\sigma A T^4$$</div>
+  <p>$L$：光度（功率）；$T$：绝对温度；$\sigma$：Stefan–Boltzmann 常量。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>视亮度与维恩定律</h2>
+  <div class="formula">$$b=\frac{L}{4\pi d^2}$$</div>
+  <p>$b$：apparent brightness；$d$：到观测者的距离。恒星光度可用 W 或太阳光度 $L_\odot$ 表示。</p>
+  <div class="formula">$$\lambda_{\max}T=2.9\times 10^{-3}\ \mathrm{m\,K}$$</div>
+  <p>Wien 位移定律：由峰值波长求黑体温度。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>Exam tips</h2>
+  <ul>
+    <li>升温用 $mc\Delta T$，相变用 $mL$，两段要分开算</li>
+    <li>传导速率公式中的负号表示热量沿温度降低方向</li>
+    <li>辐射功率与 $T^4$ 成正比，温度稍升，辐射剧增</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="a5-relativity.html"><span>上一章</span>← A.5</a>
+  <a href="b2-greenhouse.html"><span>下一章</span>B.2 Greenhouse →</a>
+</div>
+<footer>B.1 · IB Physics HL · ~6 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

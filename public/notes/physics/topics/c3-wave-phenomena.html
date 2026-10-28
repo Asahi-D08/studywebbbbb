@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C.3 Wave phenomena · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>C.3 Wave phenomena</h1>
+  <p>反射折射 · 斯涅尔定律 · 衍射 · 干涉 · 双缝 · 单缝 · 光栅</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>边界处波行为如何解释？波通过孔缝如何表现？两列波在空间一点相遇会发生什么？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>波面与射线</h2>
+  <p>二维/三维波用 <strong>wavefronts（波面）</strong> 与 <strong>rays（射线）</strong> 描述。可画入射、反射、透射波。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>边界：反射、折射、透射</h2>
+  <ul>
+    <li><strong>反射 reflection：</strong>返回原介质</li>
+    <li><strong>折射 refraction：</strong>进入另一介质并改变方向</li>
+    <li><strong>透射 transmission：</strong>部分进入另一介质</li>
+  </ul>
+  <h3>斯涅尔定律 Snell’s law</h3>
+  <div class="formula">$$\frac{n_1}{n_2}=\frac{\sin\theta_2}{\sin\theta_1}=\frac{v_2}{v_1}$$</div>
+  <p>$n$：折射率；$\theta$：射线与法线夹角。</p>
+  <div class="def"><strong>临界角与全反射：</strong>从光密到光疏，当折射角达 $90^\circ$ 时的入射角为临界角；再增大入射角发生 total internal reflection。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>衍射 Diffraction</h2>
+  <div class="def">波绕过障碍物或通过孔缝后扩展传播。孔缝越窄（相对波长），衍射越显著。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>叠加与干涉</h2>
+  <p>波与波脉冲可叠加。<strong>相干 coherent</strong> 源（恒定相位差，通常同频率）才能形成稳定干涉。</p>
+  <div class="formula">
+    $$\text{path difference}=n\lambda\quad\text{（相长 constructive）}$$
+    $$\text{path difference}=\left(n+\tfrac12\right)\lambda\quad\text{（相消 destructive）}$$
+  </div>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>杨氏双缝 Young’s double slit</h2>
+  <div class="formula">$$s=\frac{\lambda D}{d}$$</div>
+  <table>
+    <tr><th>符号</th><th>含义</th></tr>
+    <tr><td>$s$</td><td>相邻亮纹间距</td></tr>
+    <tr><td>$D$</td><td>双缝到屏距离</td></tr>
+    <tr><td>$d$</td><td>缝间距</td></tr>
+  </table>
+  <div class="note">干涉/衍射图案限<strong>正入射</strong>讨论。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>单缝衍射</h2>
+  <div class="formula">$$\theta=\frac{\lambda}{b}$$</div>
+  <p>$b$：缝宽；$\theta$：中央亮纹半角宽（小角）。单缝强度图案对双缝干涉起<strong>调制</strong>作用。缝越宽，中央峰越窄（定性）。限单色光、矩形缝。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">7</span>多缝与衍射光栅</h2>
+  <div class="formula">$$n\lambda=d\sin\theta$$</div>
+  <p>$d$：相邻缝间距；$n$：级次。可讨论白光与多种单色光的光栅光谱。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">8</span>Exam tips</h2>
+  <ul>
+    <li>斯涅尔：$n$ 大 → 光密 → 波速小</li>
+    <li>双缝：$s$ 与 $\lambda$、$D$ 成正比，与 $d$ 成反比</li>
+    <li>光栅公式：$n=0$ 为零级；增大 $n$ 或 $\lambda$ → $\theta$ 增大</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="c2-wave-model.html"><span>上一章</span>← C.2</a>
+  <a href="c4-standing-waves.html"><span>下一章</span>C.4 Standing waves →</a>
+</div>
+<footer>C.3 · SL 5 h · HL +6 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

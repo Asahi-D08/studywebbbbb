@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D.4 Induction (HL) · IB Physics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>D.4 Induction <span class="badge badge-hl">HL only</span></h1>
+  <p>磁通量 · 法拉第定律 · 动生电动势 · 楞次定律 · 旋转线圈</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>导体与磁场相对运动有何效应？如何提高发电机功率输出？电磁感应如何推动工业化？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>磁通量 Magnetic flux</h2>
+  <div class="formula">$$\Phi=BA\cos\theta$$</div>
+  <p>$\theta$：磁场与法线（面积方向）夹角。$\Phi$ 变化才会感生电动势。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>法拉第定律 Faraday’s law</h2>
+  <div class="formula">$$\varepsilon=-N\frac{\Delta\Phi}{\Delta t}$$</div>
+  <ul>
+    <li>$N$：匝数</li>
+    <li>负号体现楞次定律方向（能量守恒）</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>动生电动势（直导线）</h2>
+  <div class="def">直导体在匀强磁场中<strong>垂直</strong>切割磁感线时：</div>
+  <div class="formula">$$\varepsilon=BvL$$</div>
+  <p>定量计算限于：垂直切割的直导线；矩形线圈进出磁场或在磁场中旋转。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>楞次定律 Lenz’s law</h2>
+  <div class="def">感应电流的方向总是<strong>阻碍</strong>引起它的磁通量变化。这是能量守恒的必然结果（否则可无中生有）。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>旋转线圈（交流发电机原理）</h2>
+  <ul>
+    <li>线圈在匀强磁场中旋转 → 感应电动势按正弦规律变化</li>
+    <li>转速（频率）升高 → 感应电动势幅值与变化率增大</li>
+  </ul>
+  <p>产生感应电动势的典型情境：时变磁场；线圈在匀强场中旋转；导体与磁场相对运动（如磁铁在弹簧上在线圈上方振动，或线圈进出磁场区）。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>自感（定性）</h2>
+  <p>只需定性理解自感；不要求电感量计算与 RL 电路。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">7</span>Exam tips</h2>
+  <ul>
+    <li>先算 $\Phi$，再看 $\Delta\Phi/\Delta t$</li>
+    <li>方向：用楞次“阻碍变化”判断</li>
+    <li>$\varepsilon=BvL$：三者两两垂直才取最大值</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="d3-motion-em.html"><span>上一章</span>← D.3</a>
+  <a href="../index.html"><span>目录</span>Index（下一批 Theme E）</a>
+</div>
+<footer>D.4 · HL only · ~6 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C.1 Simple harmonic motion · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>C.1 Simple harmonic motion</h1>
+  <p>定义方程 · 周期公式 · 能量 · HL 定量描述</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>为何谐振子模型适用广泛？定义方程为何必须是该形式？如何用图与代数分析振荡能量与运动？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>SHM 条件与定义</h2>
+  <div class="def">当加速度与位移成正比且方向<strong>相反</strong>（指向平衡位置）时，为简谐运动。</div>
+  <div class="formula">$$a=-\omega^2 x$$</div>
+  <p>负号表示恢复：位移为正时加速度为负。</p>
+  <table>
+    <tr><th>量</th><th>含义</th></tr>
+    <tr><td>$T$</td><td>周期</td></tr>
+    <tr><td>$f$</td><td>频率</td></tr>
+    <tr><td>$\omega$</td><td>角频率</td></tr>
+    <tr><td>$x_0$</td><td>振幅 amplitude</td></tr>
+    <tr><td>$x$</td><td>相对平衡位置的位移</td></tr>
+  </table>
+  <div class="formula">$$T=\frac{1}{f}=\frac{2\pi}{\omega}$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>两类经典周期</h2>
+  <div class="formula">$$T=2\pi\sqrt{\frac{m}{k}}\quad\text{（弹簧–质量）}$$</div>
+  <div class="formula">$$T=2\pi\sqrt{\frac{l}{g}}\quad\text{（单摆，小角度）}$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>能量（SL：定性；HL：定量）</h2>
+  <p>一个周期内：$E_k$ 与 $E_p$ 相互转化，总机械能在无阻尼时守恒。平衡位置动能最大；端点势能最大、速度为零。</p>
+  <p><span class="badge badge-hl">HL</span> 定量：</p>
+  <div class="formula">
+    $$E_T=\tfrac12 m\omega^2 x_0^2$$
+    $$E_p=\tfrac12 m\omega^2 x^2$$
+  </div>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>运动方程 <span class="badge badge-hl">HL</span></h2>
+  <div class="formula">
+    $$x=x_0\sin(\omega t+\phi)$$
+    $$v=\omega x_0\cos(\omega t+\phi)$$
+    $$v=\pm\omega\sqrt{x_0^2-x^2}$$
+  </div>
+  <div class="note">相位角 $\phi$ 用弧度。可用圆周运动投影帮助想象 SHM。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>Exam tips</h2>
+  <ul>
+    <li>先确认是否满足 $a\propto -x$</li>
+    <li>弹簧用 $k$，摆用 $l$ 与 $g$，不要混用</li>
+    <li>HL：由振幅与位置求速率用 $v=\pm\omega\sqrt{x_0^2-x^2}$</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="../electricity.html"><span>上一章</span>← B.5</a>
+  <a href="c2-wave-model.html"><span>下一章</span>C.2 Wave model →</a>
+</div>
+<footer>C.1 · SL 3 h · HL +4 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D.3 Motion in electromagnetic fields · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>D.3 Motion in electromagnetic fields</h1>
+  <p>电场中运动 · 磁场力 · 正交场 · 载流导线 · 平行导线力</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>带电粒子在磁场中如何运动？从电磁场中的运动能推断粒子何种性质？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>匀强电场中的带电粒子</h2>
+  <ul>
+    <li>恒力 $F=qE$ → 匀加速（类似重力场中的抛体思路）</li>
+    <li>平行板间：常用能量 $qV=\Delta E_k$</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>匀强磁场中的带电粒子</h2>
+  <div class="formula">$$F=qvB\sin\theta$$</div>
+  <ul>
+    <li>力垂直于 $\vec{v}$ 与 $\vec{B}$ → 不做功 → <strong>动能不变</strong></li>
+    <li>$\vec{v}\perp\vec{B}$ 时做匀速圆周：$qvB=mv^2/r$</li>
+    <li>可由径迹求荷质比 $q/m$</li>
+  </ul>
+  <div class="formula">$$r=\frac{mv}{qB}\qquad \frac{q}{m}=\frac{v}{Br}$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>正交匀强电场与磁场</h2>
+  <p>当 $qE=qvB$（速度选择器）时，直线通过；否则轨迹弯折。可用来筛选特定速率的粒子。</p>
+  <div class="formula">$$v=\frac{E}{B}\quad\text{（直进条件）}$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>磁场对载流导线的力</h2>
+  <div class="formula">$$F=BIL\sin\theta$$</div>
+  <p>方向：Fleming 左手定则（电流、磁场、力）。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>平行载流导线间的力</h2>
+  <div class="formula">$$\frac{F}{L}=\frac{\mu_0 I_1 I_2}{2\pi r}$$</div>
+  <div class="def">电流<strong>同向相吸</strong>，反向相斥。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>Exam tips</h2>
+  <ul>
+    <li>磁场力永不改变速率，只改变方向</li>
+    <li>先画 $\vec{v}$、$\vec{B}$、$\vec{F}$ 三者垂直关系</li>
+    <li>圆周：$r$ 与 $m$、$v$ 成正比，与 $q$、$B$ 成反比</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="d2-em-fields.html"><span>上一章</span>← D.2</a>
+  <a href="d4-induction.html"><span>下一章</span>D.4 Induction (HL) →</a>
+</div>
+<footer>D.3 · IB Physics HL · ~6 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

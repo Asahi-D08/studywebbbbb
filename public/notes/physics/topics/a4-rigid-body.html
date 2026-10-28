@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A.4 Rigid body mechanics (HL) · IB Physics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>A.4 Rigid body mechanics <span class="badge badge-hl">HL only</span></h1>
+  <p>力矩 · 转动平衡 · 角运动学 · 转动惯量 · 角动量 · 转动动能</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>如何把直线运动类比到转动？力矩如何改变转动？质量分布如何影响转动？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>力矩 Torque</h2>
+  <div class="def">力对某轴的力矩取决于力的大小、力臂与角度。</div>
+  <div class="formula">$$\tau = Fr\sin\theta$$</div>
+  <ul>
+    <li>需区分顺时针 / 逆时针（矢量严格处理不作要求）</li>
+    <li><strong>转动平衡：</strong>合力矩为零 $\sum\tau=0$（同时通常还要求平动平衡 $\sum F=0$）</li>
+    <li>不平衡力矩 → 角加速度</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>角运动学（匀角加速）</h2>
+  <p>与直线运动 suvat 一一对应：</p>
+  <div class="formula">
+    $$\Delta\theta=\tfrac12(\omega_i+\omega_f)t$$
+    $$\omega_f=\omega_i+\alpha t$$
+    $$\Delta\theta=\omega_i t+\tfrac12\alpha t^2$$
+    $$\omega_f^2=\omega_i^2+2\alpha\Delta\theta$$
+  </div>
+  <table>
+    <tr><th>线量</th><th>角量</th></tr>
+    <tr><td>$s$</td><td>$\theta$ / $\Delta\theta$</td></tr>
+    <tr><td>$u,v$</td><td>$\omega_i,\omega_f$</td></tr>
+    <tr><td>$a$</td><td>$\alpha$</td></tr>
+    <tr><td>$t$</td><td>$t$</td></tr>
+  </table>
+  <div class="note">大纲使用 angular speed；“angular velocity”一词会出现，但不要求形式矢量运算。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>转动惯量 Moment of inertia</h2>
+  <div class="def">$I$ 描述质量相对转轴的分布。轴不同，$I$ 不同。</div>
+  <div class="formula">$$I=\sum mr^2\quad\text{（质点系）}$$</div>
+  <ul>
+    <li>具体形状的 $I$ 公式题目会给出</li>
+    <li>质心：讨论平动时，可将质量集中在质心（不必会算复杂质心）</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>转动形式的牛顿第二定律</h2>
+  <div class="formula">$$\tau=I\alpha$$</div>
+  <p>（$\tau$ 为关于该轴的平均/合力矩）</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>角动量与角冲量</h2>
+  <div class="formula">
+    $$L=I\omega$$
+    $$\Delta L=\tau\Delta t=\Delta(I\omega)$$
+  </div>
+  <div class="def">无外力矩为零时，<strong>角动量守恒</strong>。$I$ 变小 → $\omega$ 变大（花样滑冰收臂）。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>转动动能；纯滚动</h2>
+  <div class="formula">$$E_k=\tfrac12 I\omega^2=\frac{L^2}{2I}$$</div>
+  <div class="def">同时有平动与转动时，大纲限制为<strong>无滑动滚动 rolling without slipping</strong>：$v=\omega r$。</div>
+  <div class="formula">$$E_{k,\text{total}}=\tfrac12 mv_{\text{cm}}^2+\tfrac12 I_{\text{cm}}\omega^2$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">7</span>Exam tips</h2>
+  <ul>
+    <li>先选转轴，再列 $\sum\tau=I\alpha$</li>
+    <li>守恒题：明确“对哪根轴、外力矩是否为零”</li>
+    <li>线量↔角量：$v=\omega r$，$a_t=\alpha r$（切向）</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="a3-work-energy-power.html"><span>上一章</span>← A.3</a>
+  <a href="a5-relativity.html"><span>下一章</span>A.5 Relativity (HL) →</a>
+</div>
+<footer>A.4 · HL only · ~7 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

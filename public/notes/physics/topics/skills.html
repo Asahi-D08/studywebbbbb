@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills · 测量与数据处理 · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>Skills in the study of physics</h1>
+  <p>测量 · 基本单位 · 误差与不确定度 · 图像处理 · 标量与矢量</p>
+</header>
+
+<div class="guide"><strong>Syllabus focus：</strong>能正确使用 SI 单位与量纲检验；区分系统/随机误差与准确度/精确度；合成不确定度；从图像读取梯度、截距与不确定度；正确处理矢量。</div>
+
+<section class="card">
+  <h2><span class="num">1</span>基本单位与量纲齐次性</h2>
+  <div class="def">若方程左右两边的<strong>基本单位</strong>相同，则该方程是<strong>量纲齐次（homogeneous）</strong>的。量纲齐次是公式正确的<strong>必要条件</strong>（但不充分）。</div>
+  <table>
+    <tr><th>物理量</th><th>导出单位</th><th>基本单位</th><th>来源</th></tr>
+    <tr><td>力 Force</td><td>N</td><td>$1\ \text{kg}\,\text{m}\,\text{s}^{-2}$</td><td>$F=ma$</td></tr>
+    <tr><td>能量 Energy</td><td>J</td><td>$1\ \text{kg}\,\text{m}^{2}\,\text{s}^{-2}$</td><td>$E=\tfrac12 mv^2$</td></tr>
+    <tr><td>压强 Pressure</td><td>Pa</td><td>$1\ \text{kg}\,\text{m}^{-1}\,\text{s}^{-2}$</td><td>$p=F/A$</td></tr>
+    <tr><td>功率 Power</td><td>W</td><td>$1\ \text{kg}\,\text{m}^{2}\,\text{s}^{-3}$</td><td>$P=E/t$</td></tr>
+  </table>
+  <div class="note"><strong>Exam tip：</strong>用基本单位检验选项时，先把所有导出单位拆成 kg、m、s、A、K、mol、cd。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>误差：系统误差与随机误差</h2>
+  <div class="twocol">
+    <div class="box sys">
+      <h3 style="margin-top:0;color:var(--red);">系统误差 Systematic</h3>
+      <p>每次重复都<strong style="color:var(--red);">相同方向、相同量</strong>地偏移真值（含零点误差）。</p>
+      <ul>
+        <li>来自仪器或实验设置</li>
+        <li>影响<strong style="color:var(--red);">准确度 accuracy</strong></li>
+        <li>不能靠重复/平均消除</li>
+      </ul>
+    </div>
+    <div class="box ran">
+      <h3 style="margin-top:0;">随机误差 Random</h3>
+      <p>重复实验时结果在真值附近<strong>随机波动</strong>。</p>
+      <ul>
+        <li>影响<strong>精确度 precision</strong></li>
+        <li>表现为数据离散</li>
+        <li>可通过重复并取平均减小</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>准确度与精确度</h2>
+  <figure>
+    <img src="../accuracy-precision.png" alt="accuracy vs precision">
+    <figcaption>(a) 准且精　(b) 准不精　(c) 精不准　(d) 既不准也不精</figcaption>
+  </figure>
+  <div class="note"><strong>记忆：</strong>系统误差 → 准确度；随机误差 → 精确度。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>不确定度 Uncertainty</h2>
+  <div class="def">单次读数不确定度通常取仪器<strong>最小分度的一半</strong>（$\pm\tfrac12$ division）。</div>
+  <h3>合成规则</h3>
+  <table>
+    <tr><th>运算</th><th>规则</th></tr>
+    <tr><td>加减（同单位）</td><td>绝对不确定度相加</td></tr>
+    <tr><td>乘除 / 乘方</td><td>百分比不确定度相加；乘方再乘指数</td></tr>
+  </table>
+  <div class="formula">$$\text{percentage uncertainty}=\frac{\Delta x}{x}\times 100\%$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>图像处理</h2>
+  <figure>
+    <img src="../微信图片_20260705134937_31_110.png" alt="error bars">
+    <figcaption>误差棒与最佳拟合线</figcaption>
+  </figure>
+  <ul>
+    <li>误差棒长度 ÷ 2 → 该点绝对不确定度</li>
+    <li>最佳拟合线须穿过（或合理穿过）误差棒</li>
+    <li>梯度：取线上<strong>相距较远</strong>两点</li>
+  </ul>
+  <div class="formula">$$\text{gradient}=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>标量与矢量</h2>
+  <div class="twocol">
+    <div class="box"><h3 style="margin-top:0;">标量 Scalar</h3><p>只有大小（magnitude）。例：质量、时间、能量、速率。</p></div>
+    <div class="box"><h3 style="margin-top:0;">矢量 Vector</h3><p>大小 + 方向。例：位移、速度、加速度、力、动量。</p></div>
+  </div>
+  <h3>加法 / 减法</h3>
+  <div class="twocol">
+    <figure><img src="../微信图片_20260705135840_33_110.jpg" alt="add"><figcaption>矢量加法</figcaption></figure>
+    <figure><img src="../微信图片_20260705135950_34_110.jpg" alt="add2"><figcaption>平行四边形法则</figcaption></figure>
+  </div>
+  <div class="formula">$$\vec{F_2}-\vec{F_1}=\vec{F_2}+(-\vec{F_1})$$</div>
+  <figure><img src="../微信图片_20260705140315_35_110.jpg" alt="sub"><figcaption>矢量减法</figcaption></figure>
+  <h3>正交分解</h3>
+  <figure><img src="../微信图片_20260705144318_39_110.png" alt="resolve"><figcaption>Resolve vectors</figcaption></figure>
+  <div class="formula">$$F_x=F\cos\theta\qquad F_y=F\sin\theta$$</div>
+</section>
+
+<div class="prevnext">
+  <a href="../index.html"><span>目录</span>IB Physics HL Index</a>
+  <a href="a1-kinematics.html"><span>下一章</span>A.1 Kinematics →</a>
+</div>
+<footer>Skills · IB Physics HL</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

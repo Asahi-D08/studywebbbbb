@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C.2 Wave model · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>C.2 Wave model</h1>
+  <p>横波纵波 · 波速公式 · 声波 · 电磁波 · 机械波 vs 电磁波</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>不同类型波的异同？波模型如何描述介质局部扰动导致的能量传递？频率或介质改变如何影响波长？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>行波分类</h2>
+  <table>
+    <tr><th>类型</th><th>振动方向相对传播方向</th><th>例子</th></tr>
+    <tr><td>横波 transverse</td><td>垂直</td><td>绳波、电磁波</td></tr>
+    <tr><td>纵波 longitudinal</td><td>平行（疏密）</td><td>声波（空气中）</td></tr>
+  </table>
+  <div class="def">行波传递<strong>能量</strong>；介质粒子可无净位移（只在平衡位置附近振动）。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>波长、频率与波速</h2>
+  <div class="formula">$$v=f\lambda=\frac{\lambda}{T}$$</div>
+  <ul>
+    <li>频率由<strong>波源</strong>决定</li>
+    <li>波速由<strong>介质</strong>（及波型）决定</li>
+    <li>波长随之满足 $v=f\lambda$</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>声波与电磁波</h2>
+  <h3>声波</h3>
+  <p>机械纵波；需要介质；粒子沿传播方向振动形成压缩与稀疏。</p>
+  <h3>电磁波</h3>
+  <p>横波；电场与磁场相互垂直且垂直于传播方向；可在真空中传播。</p>
+  <table>
+    <tr><th>波段</th><th>波长数量级（参考 Data booklet）</th></tr>
+    <tr><td>无线电 radio</td><td>最长（km 量级可至更长）</td></tr>
+    <tr><td>微波 microwave</td><td>cm–mm</td></tr>
+    <tr><td>红外 IR</td><td>μm</td></tr>
+    <tr><td>可见光 visible</td><td>约 $4\times10^{-7}$–$7\times10^{-7}\,\mathrm{m}$</td></tr>
+    <tr><td>紫外 UV</td><td>更短</td></tr>
+    <tr><td>X 射线 / γ 射线</td><td>最短</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>机械波 vs 电磁波</h2>
+  <table>
+    <tr><th></th><th>机械波</th><th>电磁波</th></tr>
+    <tr><td>介质</td><td>需要</td><td>不需要（可真空）</td></tr>
+    <tr><td>本质</td><td>介质振动传播</td><td>电磁场振荡传播</td></tr>
+    <tr><td>真空波速</td><td>—</td><td>$c\approx 3.00\times10^8\,\mathrm{m\,s^{-1}}$</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>Exam tips</h2>
+  <ul>
+    <li>描述粒子运动：对横波画上下振动；对纵波画前后振动</li>
+    <li>强度随距离：球面波常按平方反比衰减</li>
+    <li>换介质：频率不变，波速变 → 波长变</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="c1-shm.html"><span>上一章</span>← C.1</a>
+  <a href="c3-wave-phenomena.html"><span>下一章</span>C.3 Wave phenomena →</a>
+</div>
+<footer>C.2 · IB Physics HL · ~3 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

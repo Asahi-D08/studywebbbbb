@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A.5 Galilean and special relativity (HL) · IB Physics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>A.5 Galilean and special relativity <span class="badge badge-hl">HL only</span></h1>
+  <p>参考系 · 伽利略变换 · 狭义相对论公设 · Lorentz · 时间膨胀 · 长度收缩 · 时空图</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>不同参考系如何描述事件？狭义相对论如何改变对运动的理解？如何用时空图表示相对论运动？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>参考系与伽利略相对性</h2>
+  <div class="def"><strong>惯性系</strong>：不加速的参考系。牛顿定律在所有惯性系中形式相同 → <strong>伽利略相对性</strong>。</div>
+  <h3>伽利略变换（S' 相对 S 以速度 $v$ 沿 $x$ 运动）</h3>
+  <div class="formula">$$x'=x-vt\qquad t'=t\qquad u'=u-v$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>狭义相对论的两条公设</h2>
+  <ol>
+    <li>物理定律在所有惯性系中相同</li>
+    <li>真空中光速 $c$ 对所有惯性系观测者都相同（与光源运动无关）</li>
+  </ol>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>Lorentz 变换与相对论速度合成</h2>
+  <div class="formula">
+    $$\gamma=\frac{1}{\sqrt{1-v^2/c^2}}$$
+    $$x'=\gamma(x-vt)\qquad t'=\gamma\!\left(t-\frac{vx}{c^2}\right)$$
+    $$u'=\frac{u-v}{1-uv/c^2}$$
+  </div>
+  <div class="note"><strong>不要求</strong>推导 Lorentz 变换与相对论速度合成式；会用即可。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>不变量：时空间隔</h2>
+  <div class="formula">$$(\Delta s)^2=(c\Delta t)^2-(\Delta x)^2$$</div>
+  <p>$\Delta s$ 在不同惯性系中不变。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>原时、固有长度；时间膨胀与长度收缩</h2>
+  <table>
+    <tr><th>概念</th><th>含义</th><th>公式</th></tr>
+    <tr><td>原时 $\Delta t_0$ proper time</td><td>两事件在<strong>同一地点</strong>发生时，该钟测得的时间间隔</td><td>最短</td></tr>
+    <tr><td>时间膨胀</td><td>运动的钟走得“更慢”</td><td>$\Delta t=\gamma\Delta t_0$</td></tr>
+    <tr><td>固有长度 $L_0$ proper length</td><td>物体在<strong>相对静止</strong>参考系中测得的长度</td><td>最长</td></tr>
+    <tr><td>长度收缩</td><td>沿相对运动方向长度变短</td><td>$L=L_0/\gamma$</td></tr>
+  </table>
+  <div class="def"><strong>同时性的相对性：</strong>在一个参考系中同时发生的、空间分离的两事件，在另一相对运动的参考系中一般不同时。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>时空图 Space–time diagrams</h2>
+  <ul>
+    <li>时间轴标记为 $ct$</li>
+    <li>世界线（world line）：粒子在时空中的轨迹；本单元限<strong>匀速</strong></li>
+    <li>世界线与时间轴夹角满足 $\tan\theta=v/c$</li>
+    <li>可用时空图理解时间膨胀、长度收缩与同时性</li>
+    <li>$ct$ 与 $ct'$、$x$ 与 $x'$ 的刻度一般不同，由等间隔线确定</li>
+  </ul>
+  <div class="formula">$$\tan\theta=\frac{v}{c}$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">7</span>实验证据：μ 子衰变</h2>
+  <p>大气 μ 子衰变实验为时间膨胀与长度收缩提供证据：若无经典寿命与路程，地面探测到的 μ 子远少于实际观测；用 $\gamma$ 因子修正后与实验一致。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">8</span>Exam tips</h2>
+  <ul>
+    <li>先判断：谁测的是 proper time / proper length？</li>
+    <li>$v\to c$ 时 $\gamma\to\infty$；$v\ll c$ 时 $\gamma\approx 1$，回到经典</li>
+    <li>光速不可叠加超过 $c$（用相对论速度合成）</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="a4-rigid-body.html"><span>上一章</span>← A.4</a>
+  <a href="../electricity.html"><span>相关已完成</span>B.5 Current &amp; circuits →</a>
+</div>
+<footer>A.5 · HL only · ~8 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

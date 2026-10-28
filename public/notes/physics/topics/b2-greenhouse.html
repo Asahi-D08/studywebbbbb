@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.2 Greenhouse effect · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>B.2 Greenhouse effect</h1>
+  <p>发射率 · 反照率 · 太阳常数 · 温室气体 · 增强温室效应 · 能量平衡</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>温室效应如何维持生命？人类活动如何增强它？如何用大气系统模型量化地气能量平衡？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>能量守恒框架</h2>
+  <div class="def">地球–大气系统的长期平均：入射辐射功率 ≈ 出射辐射功率（否则温度持续升降）。题目常据此估算平衡温度。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>发射率与反照率</h2>
+  <h3>Emissivity $e$</h3>
+  <div class="formula">$$e=\frac{\text{power radiated per unit area}}{\sigma T^4}$$</div>
+  <p>相对理想黑体（同温）的辐射本领之比；$0\le e\le 1$，黑体 $e=1$。</p>
+  <h3>Albedo $\alpha$</h3>
+  <div class="formula">$$\alpha=\frac{\text{total scattered power}}{\text{total incident power}}$$ </div>
+  <ul>
+    <li>度量系统平均反射能力</li>
+    <li>地球反照率随云量、纬度等日变化</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>太阳常数与平均入射强度</h2>
+  <div class="def"><strong>太阳常数 $S$：</strong>在地球公转平均距离处、垂直于太阳光线的单位面积上接收到的太阳辐射功率。</div>
+  <p>行星截获的是投影圆盘面积 $\pi R^2$，但能量要分摊到整球表面积 $4\pi R^2$，故球面上平均入射强度为：</p>
+  <div class="formula">$$I_{\text{mean}}=\frac{S}{4}$$</div>
+  <p>考虑反照率后，平均<strong>吸收</strong>强度约为 $(S/4)(1-\alpha)$。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>温室气体与机制</h2>
+  <p>主要温室气体：$\mathrm{CH_4}$、$\mathrm{H_2O}$、$\mathrm{CO_2}$、$\mathrm{N_2O}$——均有天然来源与人为来源。</p>
+  <ul>
+    <li>气体分子吸收红外辐射（与分子能级有关），再向<strong>各方向</strong>再辐射</li>
+    <li>可用<strong>共振模型</strong>与<strong>分子能级</strong>两种观点解释温室效应</li>
+    <li>人类活动导致的额外增强称为 <strong>enhanced greenhouse effect</strong></li>
+    <li>化石燃料燃烧是增强温室效应的主要原因之一</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>能量平衡估算（典型题型）</h2>
+  <p>题目可能要求：用入射/出射辐射、反照率、发射率、太阳常数估算物体或行星平衡温度；也包括地表与大气之间的能量交换。</p>
+  <div class="formula">$$e\sigma T^4 \approx \frac{S}{4}(1-\alpha)\quad\text{（简化无大气模型示例）}$$</div>
+  <div class="note">实际考题会给出更完整的分层模型；关键是：哪一侧是吸收、哪一侧是辐射、$e$ 与 $\alpha$ 用在何处。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>Exam tips</h2>
+  <ul>
+    <li>区分：太阳常数 $S$ vs 平均强度 $S/4$</li>
+    <li>反照率高 → 反射多 → 吸收少 → 平衡温度偏低</li>
+    <li>“自然温室效应”维持宜居温度；“增强”才是人为额外增温</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="b1-thermal.html"><span>上一章</span>← B.1</a>
+  <a href="b3-gas-laws.html"><span>下一章</span>B.3 Gas laws →</a>
+</div>
+<footer>B.2 · IB Physics HL · ~6 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A.3 Work, energy and power · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>A.3 Work, energy and power</h1>
+  <p>功 · 机械能 · 守恒 · 功率 · 效率 · 能量密度</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>功、能、功率如何预测系统变化？能量观点如何解运动学问题？能量如何通过做功转移？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>能量守恒</h2>
+  <div class="def">能量既不能创生也不能消灭，只能<strong>转化</strong>或<strong>转移</strong>。可用 Sankey 图表示能量流。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>功 Work</h2>
+  <div class="def">恒力做功等于力沿位移方向的分量与位移的乘积；做功对应能量转移。</div>
+  <div class="formula">$$W=Fs\cos\theta$$</div>
+  <ul>
+    <li>$\theta$：力与位移夹角</li>
+    <li>$\theta=90^\circ$ → $W=0$（如理想向心力）</li>
+    <li>合力做的功 = 系统能量变化（动能定理形式）</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>机械能</h2>
+  <p>机械能 = 动能 + 重力势能 + 弹性势能。</p>
+  <div class="formula">
+    $$E_k=\tfrac12 mv^2=\frac{p^2}{2m}$$
+    $$\Delta E_p=mg\Delta h\quad\text{（近地表面）}$$
+    $$E_H=\tfrac12 k(\Delta x)^2$$
+  </div>
+  <div class="def">无摩擦/阻力等非保守力时，机械能守恒。非保守力做功使机械能减少（通常转为热能）。</div>
+  <div class="note"><strong>Exam tip：</strong>$\Delta E_p=mg\Delta h$ 只在“靠近地球表面、$g$ 近似恒定”时成立；远离地表要用引力势能（D.1）。</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>功率与效率</h2>
+  <div class="formula">
+    $$P=\frac{\Delta W}{\Delta t}=Fv$$
+    $$\eta=\frac{\text{useful work out}}{\text{total work in}}=\frac{\text{useful power out}}{\text{total power in}}$$
+  </div>
+  <p><strong>能量密度 energy density：</strong>单位质量（或单位体积，看题目定义）燃料可释放的能量，用于比较能源。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>解题策略（Save My Exams 风格）</h2>
+  <ul>
+    <li>先判断：用牛顿定律还是能量更省事？</li>
+    <li>写清“系统”与初末状态</li>
+    <li>有摩擦：机械能不守恒，用 $W_{\text{nc}}=\Delta E_{\text{mech}}$</li>
+    <li>检查单位：J、W、N·m</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="a2-forces-momentum.html"><span>上一章</span>← A.2</a>
+  <a href="a4-rigid-body.html"><span>下一章</span>A.4 Rigid body (HL) →</a>
+</div>
+<footer>A.3 · IB Physics HL · ~8 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C.4 Standing waves and resonance · IB Physics HL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>C.4 Standing waves and resonance</h1>
+  <p>驻波形成 · 节点反节点 · 弦与管 · 共振 · 阻尼</p>
+</header>
+<div class="guide"><strong>Guiding questions：</strong>驻波与行波如何区分？边界条件如何决定驻波形态？驱动力如何导致共振？</div>
+
+<section class="card">
+  <h2><span class="num">1</span>驻波的形成</h2>
+  <div class="def">两列相同（频率、振幅、波速）但相向传播的波叠加 → <strong>驻波 standing wave</strong>。（不讨论多于两列的叠加。）</div>
+  <ul>
+    <li><strong>节点 node：</strong>振幅始终为零</li>
+    <li><strong>反节点 antinode：</strong>振幅最大</li>
+    <li>相邻节点间距 $=\lambda/2$</li>
+    <li>节点两侧振动反相；相邻反节点同相</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">2</span>弦上的驻波</h2>
+  <p>边界条件：两端固定 / 一端固定一端自由 / 两端自由。</p>
+  <div class="note">本课程最低频模式称为 <strong>first harmonic（第一谐音）</strong>。不用 fundamental / overtone 术语。</div>
+  <p>两端固定弦：第 $n$ 谐音有 $n$ 个半波长</p>
+  <div class="formula">$$L=n\frac{\lambda}{2}\quad\Rightarrow\quad\lambda=\frac{2L}{n}\quad\Rightarrow\quad f_n=\frac{nv}{2L}$$</div>
+</section>
+
+<section class="card">
+  <h2><span class="num">3</span>空气柱（管）中的驻波</h2>
+  <p>管：开口 open 或闭口 closed。不要求末端修正。</p>
+  <table>
+    <tr><th>管型</th><th>边界（位移）</th><th>谐音</th></tr>
+    <tr><td>两端闭</td><td>两端为位移节点</td><td>类似两端固定弦</td></tr>
+    <tr><td>一端开一端闭</td><td>闭端节点、开端反节点</td><td>仅奇次：$f=(2n-1)v/(4L)$</td></tr>
+    <tr><td>两端开</td><td>两端反节点</td><td>$f=nv/(2L)$</td></tr>
+  </table>
+  <p>用<strong>位移</strong>节点/反节点讨论；气压节点不作要求。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">4</span>共振 Resonance</h2>
+  <div class="def">驱动力频率接近系统<strong>固有频率 natural frequency</strong> 时，振幅显著增大 → 共振。</div>
+  <ul>
+    <li>振幅随驱动频率变化；共振峰位置与高度受阻尼影响</li>
+    <li>共振可有用（乐器）也可有害（结构损坏）</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="num">5</span>阻尼 Damping（定性）</h2>
+  <table>
+    <tr><th>类型</th><th>效果</th></tr>
+    <tr><td>轻度 light</td><td>振幅缓慢衰减；仍可振荡多次</td></tr>
+    <tr><td>临界 critical</td><td>最快回到平衡且不越过（或刚好不振荡）</td></tr>
+    <tr><td>重度 heavy</td><td>缓慢回到平衡，无振荡</td></tr>
+  </table>
+  <p>阻尼增大 → 共振峰降低、展宽，共振频率可略降（定性即可）。</p>
+</section>
+
+<section class="card">
+  <h2><span class="num">6</span>Exam tips</h2>
+  <ul>
+    <li>先画节点/反节点，再数半波长求 $\lambda$</li>
+    <li>闭口管：只有奇次谐音</li>
+    <li>驱频 = 固有频率 → 共振</li>
+  </ul>
+</section>
+
+<div class="prevnext">
+  <a href="c3-wave-phenomena.html"><span>上一章</span>← C.3</a>
+  <a href="c5-doppler.html"><span>下一章</span>C.5 Doppler →</a>
+</div>
+<footer>C.4 · IB Physics HL · ~4 h</footer>
+</div>
+<script src="../i18n.js"></script>
+<script>PhysI18n.initTopbar({homeHref:"../index.html"});</script>
+</body>
+</html>
