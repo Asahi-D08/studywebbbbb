@@ -75,7 +75,7 @@ type ReviewSubject = {
 ### 物理静态笔记
 
 - 复制 `~/Desktop/wuli/electricity/` → `public/notes/physics/`，排除 `.md` 源文件和 `.DS_Store`。
-- 新增 `public/notes/physics/site-nav.js`：注入一条固定在顶部的细导航条（返回首页和物理分区），所有 HTML 页面在 `</body>` 前引用它。
+- 修改复制后的 `public/notes/physics/i18n.js`：所有笔记页都通过 `PhysI18n.initTopbar` 生成顶栏，在其中插入 “← StudyWeb” 链接（指向 `/subjects/physics`），无需改动各 HTML 文件。
 - 中文文件名的图片保持原样；Next 静态文件服务支持 URL 编码路径，需要在浏览器里验证。
 
 ## 视觉
