@@ -2,6 +2,10 @@ import Link from "next/link";
 import { getSession } from "@/lib/auth-server";
 import { LogoutButton } from "@/components/LogoutButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { LanguageToggle } from "@/components/LanguageToggle";
+import { getLang } from "@/lib/lang-server";
+import { pick, t } from "@/lib/i18n";
+import { SUBJECTS } from "@/lib/subjects";
 
 export type Crumb = { href: string; label: string };
 
@@ -14,6 +18,7 @@ export async function SiteHeader({
   loginReturnHref?: string;
 }) {
   const session = await getSession();
+  const lang = await getLang();
   const loginHref = loginReturnHref
     ? `/login?next=${encodeURIComponent(loginReturnHref)}`
     : "/login";
@@ -30,29 +35,25 @@ export async function SiteHeader({
               StudyWeb
             </div>
             <div className="text-[11px] uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
-              Notes Hub
+              {t("brand.sub", lang)}
             </div>
           </div>
         </Link>
 
         <div className="flex flex-1 flex-wrap items-center justify-end gap-3 sm:gap-4">
-          <ThemeToggle />
           <nav className="hidden items-center gap-1 text-sm text-slate-600 dark:text-slate-300 md:flex">
-            {(
-              [
-                { slug: "igcse", label: "IGCSE" },
-                { slug: "ib", label: "IB" },
-              ] as const
-            ).map((p) => (
+            {SUBJECTS.map((s) => (
               <Link
-                key={p.slug}
-                href={`/${p.slug}`}
+                key={s.slug}
+                href={`/subjects/${s.slug}`}
                 className="rounded-lg px-3 py-1.5 transition hover:bg-slate-200/80 hover:text-slate-900 dark:hover:bg-white/5 dark:hover:text-white"
               >
-                {p.label}
+                {pick(s.short, lang)}
               </Link>
             ))}
           </nav>
+          <LanguageToggle lang={lang} />
+          <ThemeToggle />
           {session ? (
             <div className="flex items-center gap-2 border-l border-slate-200 pl-3 dark:border-white/10 sm:pl-4">
               <span
@@ -68,7 +69,7 @@ export async function SiteHeader({
               href={loginHref}
               className="rounded-lg border border-slate-300 px-3 py-1.5 text-xs font-medium text-slate-800 transition hover:border-slate-400 hover:bg-slate-100 dark:border-white/15 dark:text-white dark:hover:border-white/30 dark:hover:bg-white/5"
             >
-              Sign in
+              {t("nav.signIn", lang)}
             </Link>
           )}
         </div>
@@ -77,7 +78,7 @@ export async function SiteHeader({
       {crumbs && crumbs.length > 0 && (
         <div className="border-t border-slate-200/80 dark:border-white/5">
           <div className="mx-auto max-w-6xl px-6 py-2 text-sm text-slate-600 dark:text-slate-400">
-            <Breadcrumbs crumbs={crumbs} />
+            <Breadcrumbs crumbs={crumbs} homeLabel={t("nav.home", lang)} />
           </div>
         </div>
       )}
@@ -85,7 +86,7 @@ export async function SiteHeader({
   );
 }
 
-function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
+function Breadcrumbs({ crumbs, homeLabel }: { crumbs: Crumb[]; homeLabel: string }) {
   return (
     <ol className="flex flex-wrap items-center gap-1.5">
       <li>
@@ -93,7 +94,7 @@ function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
           href="/"
           className="hover:text-slate-900 dark:hover:text-white"
         >
-          Home
+          {homeLabel}
         </Link>
       </li>
       {crumbs.map((c, i) => (

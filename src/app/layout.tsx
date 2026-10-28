@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { getLang } from "@/lib/lang-server";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,19 +15,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "StudyWeb — Notes Hub",
-  description:
-    "Sign in to upload and organise study notes, files and images for IGCSE and IB.",
+  title: "StudyWeb — IB 复习站",
+  description: "IB 经济、物理、计算机、数学复习笔记。",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const lang = await getLang();
   return (
     <html
-      lang="en"
+      lang={lang === "zh" ? "zh-CN" : "en"}
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
