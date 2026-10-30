@@ -32,8 +32,6 @@ export type ReviewSubject = {
   /** First course is the default and drives the home-page progress. */
   courses: Course[];
   extras?: { label: Localized; href: string }[];
-  /** Legacy upload area for this subject. */
-  uploadHref: string;
 };
 
 function soon(code: string, zh: string, en: string, hlOnly = false): Topic {
@@ -71,7 +69,6 @@ const economics: ReviewSubject = {
     en: "Micro, macro and the global economy — diagrams, definitions and policy evaluation.",
   },
   monogram: "Ec",
-  uploadHref: "/ib/section-4/economics",
   courses: [
     {
       slug: "sl-hl",
@@ -146,7 +143,6 @@ const physics: ReviewSubject = {
     en: "Full Themes A–E notes: derivations, graphs and worked examples.",
   },
   monogram: "Ph",
-  uploadHref: "/ib/section-5/physics",
   extras: [
     { label: { zh: "综合复习：测量与力学", en: "Combined review: measurement & mechanics" }, href: `${PHYSICS_NOTES}/rev.html` },
     { label: { zh: "原版笔记目录", en: "Original notes index" }, href: `${PHYSICS_NOTES}/index.html` },
@@ -231,7 +227,6 @@ const cs: ReviewSubject = {
     en: "Computer fundamentals, networks, databases, machine learning and programming.",
   },
   monogram: "CS",
-  uploadHref: "/ib/section-6/cs",
   courses: [
     {
       slug: "sl-hl",
@@ -387,7 +382,6 @@ const math: ReviewSubject = {
     en: "Analysis & Approaches: algebra, functions, trigonometry, statistics and calculus.",
   },
   monogram: "Ma",
-  uploadHref: "/ib/section-2/math-aahl",
   courses: [
     { slug: "aa-hl", name: { zh: "AA HL", en: "AA HL" }, groups: aaGroups },
     {

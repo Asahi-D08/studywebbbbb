@@ -34,10 +34,7 @@ export default async function SubjectPage({ params, searchParams }: Props) {
 
   return (
     <>
-      <SiteHeader
-        loginReturnHref={href}
-        crumbs={[{ href, label: pick(subject.name, lang) }]}
-      />
+      <SiteHeader crumbs={[{ href, label: pick(subject.name, lang) }]} />
       <main className="mx-auto max-w-5xl px-6 py-10">
         <Link
           href="/"
@@ -113,23 +110,6 @@ export default async function SubjectPage({ params, searchParams }: Props) {
             </section>
           ))}
         </div>
-
-        <section className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-slate-200 pt-6 sm:flex-row sm:items-center dark:border-white/10">
-          <div>
-            <h2 className="text-sm font-medium text-slate-900 dark:text-white">
-              {t("subject.upload", lang)}
-            </h2>
-            <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-              {t("subject.uploadHint", lang)}
-            </p>
-          </div>
-          <Link
-            href={subject.uploadHref}
-            className="shrink-0 rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-800 transition hover:border-brand-400 hover:text-brand-800 dark:border-white/15 dark:text-white dark:hover:border-brand-300"
-          >
-            {t("subject.open", lang)} →
-          </Link>
-        </section>
       </main>
       <footer className="mx-auto max-w-5xl px-6 pb-10 pt-6 text-xs text-slate-500">
         {t("footer", lang)}

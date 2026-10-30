@@ -53,7 +53,6 @@ export default async function TopicPage({ params, searchParams }: Props) {
   return (
     <>
       <SiteHeader
-        loginReturnHref={href}
         crumbs={[
           { href: base, label: pick(subject.name, lang) },
           { href, label: `${topic.code} ${pick(topic.name, lang)}` },

@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { getSession } from "@/lib/auth-server";
-import { LogoutButton } from "@/components/LogoutButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { getLang } from "@/lib/lang-server";
@@ -9,19 +7,8 @@ import { SUBJECTS } from "@/lib/subjects";
 
 export type Crumb = { href: string; label: string };
 
-export async function SiteHeader({
-  crumbs,
-  loginReturnHref,
-}: {
-  crumbs?: Crumb[];
-  /** Prefer sending users back here after sign-in (e.g. current subject path). */
-  loginReturnHref?: string;
-}) {
-  const session = await getSession();
+export async function SiteHeader({ crumbs }: { crumbs?: Crumb[] }) {
   const lang = await getLang();
-  const loginHref = loginReturnHref
-    ? `/login?next=${encodeURIComponent(loginReturnHref)}`
-    : "/login";
 
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-background dark:border-white/10">
@@ -54,24 +41,6 @@ export async function SiteHeader({
           </nav>
           <LanguageToggle lang={lang} />
           <ThemeToggle />
-          {session ? (
-            <div className="flex items-center gap-2 border-l border-slate-200 pl-3 dark:border-white/10 sm:pl-4">
-              <span
-                className="max-w-[8rem] truncate text-xs text-slate-600 dark:text-slate-400"
-                title={session.username}
-              >
-                {session.username}
-              </span>
-              <LogoutButton />
-            </div>
-          ) : (
-            <Link
-              href={loginHref}
-              className="rounded-lg border border-slate-300 px-3 py-1.5 text-xs font-medium text-slate-800 transition hover:border-slate-400 hover:bg-slate-100 dark:border-white/15 dark:text-white dark:hover:border-white/30 dark:hover:bg-white/5"
-            >
-              {t("nav.signIn", lang)}
-            </Link>
-          )}
         </div>
       </div>
 
